@@ -21,41 +21,94 @@
 
 
 module letter_decoder (
-    input [1:0] tilt_input,    // 2-bit tilt input
-    input [3:0] switch_input,  // 4-bit switch input
-    output reg [7:0] letter    // ASCII code
+    input clk,// Clock signal
+    input rst,// Reset signal (clears everything)
+    input en,// Enable signal for input
+    input del,// Delete signal
+    input [1:0] tilt_input,// 2-bit tilt input
+    input [3:0] switch_input,// 4-bit switch input
+    output reg [7:0] letter1,// First letter
+    output reg [7:0] letter2,// Second letter
+    output reg [7:0] letter3// Third letter
 );
-    always @(*) begin
-        case ({tilt_input, switch_input}) 
-            6'b000000: letter = 8'd97;    // 'a'
-            6'b000001: letter = 8'd98;    // 'b'
-            6'b000010: letter = 8'd99;    // 'c'
-            6'b000011: letter = 8'd100;   // 'd'
-            6'b000100: letter = 8'd101;   // 'e'
-            6'b000101: letter = 8'd102;   // 'f'
-            6'b000110: letter = 8'd103;   // 'g'
-            6'b000111: letter = 8'd104;   // 'h'
-            6'b001000: letter = 8'd105;   // 'i'
-            6'b001001: letter = 8'd106;   // 'j'
-            6'b001010: letter = 8'd107;   // 'k'
-            6'b001011: letter = 8'd108;   // 'l'
-            6'b001100: letter = 8'd109;   // 'm'
-            6'b001101: letter = 8'd110;   // 'n'
-            6'b001110: letter = 8'd111;   // 'o'
-            6'b001111: letter = 8'd112;   // 'p'
-            6'b010000: letter = 8'd113;   // 'q'
-            6'b010001: letter = 8'd114;   // 'r'
-            6'b010010: letter = 8'd115;   // 's'
-            6'b010011: letter = 8'd116;   // 't'
-            6'b010100: letter = 8'd117;   // 'u'
-            6'b010101: letter = 8'd118;   // 'v'
-            6'b010110: letter = 8'd119;   // 'w'
-            6'b010111: letter = 8'd120;   // 'x'
-            6'b011000: letter = 8'd121;   // 'y'
-            6'b011001: letter = 8'd122;   // 'z'
-            default: letter = 8'd32;      // Default ' ' if invalid
-        endcase
+    reg [7:0] letter_buffer; // new inputed letter
+    reg [1:0] current_position; // Keeps track of letter slot index
+    // Letter Decoder(Same)
+// Letter decoder
+always @(*) begin
+    case ({tilt_input, switch_input})  // Concatenate tilt_input and switch_input
+        6'b000000: letter_buffer = "a"; // ASCII 97
+        6'b000001: letter_buffer = "b"; // ASCII 98
+        6'b000010: letter_buffer = "c"; // ASCII 99
+        6'b000011: letter_buffer = "d"; // ASCII 100
+        6'b000100: letter_buffer = "e"; // ASCII 101
+        6'b000101: letter_buffer = "f"; // ASCII 102
+        6'b000110: letter_buffer = "g"; // ASCII 103
+        6'b000111: letter_buffer = "h"; // ASCII 104
+        6'b001000: letter_buffer = "i"; // ASCII 105
+        6'b001001: letter_buffer = "j"; // ASCII 106
+        6'b001010: letter_buffer = "k"; // ASCII 107
+        6'b001011: letter_buffer = "l"; // ASCII 108
+        6'b001100: letter_buffer = "m"; // ASCII 109
+        6'b001101: letter_buffer = "n"; // ASCII 110
+        6'b001110: letter_buffer = "o"; // ASCII 111
+        6'b001111: letter_buffer = "p"; // ASCII 112
+        6'b010000: letter_buffer = "q"; // ASCII 113
+        6'b010001: letter_buffer = "r"; // ASCII 114
+        6'b010010: letter_buffer = "s"; // ASCII 115
+        6'b010011: letter_buffer = "t"; // ASCII 116
+        6'b010100: letter_buffer = "u"; // ASCII 117
+        6'b010101: letter_buffer = "v"; // ASCII 118
+        6'b010110: letter_buffer = "w"; // ASCII 119
+        6'b010111: letter_buffer = "x"; // ASCII 120
+        6'b011000: letter_buffer = "y"; // ASCII 121
+        6'b011001: letter_buffer = "z"; // ASCII 122
+        default: letter_buffer = " ";   // Default to space
+    endcase
+end
+
+// Sequential Logic for Buffer Management
+always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            letter1 <= " ";
+            letter2 <= " ";
+            letter3 <= " ";
+            current_position <= 2'b00;
+        end else if (en) begin
+            // Add a new letter to the next available position
+            case (current_position)
+                2'b00: begin
+                    letter1 <= letter_buffer;
+                    current_position <= 2'b01;
+                end
+                2'b01: begin
+                    letter2 <= letter_buffer;
+                    current_position <= 2'b10;
+                end
+                2'b10: begin
+                    letter3 <= letter_buffer;
+                    current_position <= 2'b10; // Stay at the last position
+                end
+            endcase
+        end else if (del) begin
+            // Delete the last entered letter
+            case (current_position)
+                2'b10: begin
+                    letter3 <= " ";
+                    current_position <= 2'b01;
+                end
+                2'b01: begin
+                    letter2 <= " ";
+                    current_position <= 2'b00;
+                end
+                2'b00: begin
+                    letter1 <= " ";
+                    current_position <= 2'b00; // No more letters to delete
+                end
+            endcase
+        end
     end
 endmodule
+
 
 
