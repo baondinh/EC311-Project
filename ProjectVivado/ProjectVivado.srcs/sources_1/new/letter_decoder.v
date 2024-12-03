@@ -33,7 +33,10 @@ module letter_decoder (
 );
     reg [7:0] letter_buffer; // new inputed letter
     reg [1:0] current_position; // Keeps track of letter slot index
-    // Letter Decoder(Same)
+    
+    reg flagDel = 0;
+    reg flagEN = 0;
+    
 // Letter decoder
 always @(*) begin
     case ({tilt_input, switch_input})  // Concatenate tilt_input and switch_input
@@ -74,39 +77,46 @@ always @(posedge clk or posedge rst) begin
             letter2 <= " ";
             letter3 <= " ";
             current_position <= 2'b00;
-        end else if (en) begin
+        end else if (en & ~flagEN) begin
             // Add a new letter to the next available position
             case (current_position)
                 2'b00: begin
                     letter1 <= letter_buffer;
                     current_position <= 2'b01;
+                    flagEN = 1;
                 end
                 2'b01: begin
                     letter2 <= letter_buffer;
                     current_position <= 2'b10;
+                    flagEN = 1;
                 end
                 2'b10: begin
                     letter3 <= letter_buffer;
                     current_position <= 2'b10; // Stay at the last position
+                    flagEN = 1;
                 end
             endcase
-        end else if (del) begin
+       end else if (del & ~flagDel) begin
             // Delete the last entered letter
             case (current_position)
                 2'b10: begin
                     letter3 <= " ";
                     current_position <= 2'b01;
+                    flagDel = 1;
                 end
                 2'b01: begin
                     letter2 <= " ";
                     current_position <= 2'b00;
+                    flagDel = 1;
                 end
                 2'b00: begin
                     letter1 <= " ";
                     current_position <= 2'b00; // No more letters to delete
+                    flagDel = 1;
                 end
             endcase
-        end
+        end else if (~del) begin flagDel = 0;
+        end else if (~en) begin flagEN = 0; end
     end
 endmodule
 
