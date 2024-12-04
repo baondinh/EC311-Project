@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Bao Dinh
 // 
 // Create Date: 12/03/2024 02:24:59 PM
 // Design Name: 
@@ -21,10 +21,8 @@
 
 
 module helloworld_scaled(clk, h_sync, v_sync, ledOn, char);
-    
     input clk;
     output reg h_sync, v_sync, ledOn, char; 
-    
     
     localparam TOTAL_WIDTH = 800;
     localparam TOTAL_HEIGHT = 525;
@@ -36,12 +34,7 @@ module helloworld_scaled(clk, h_sync, v_sync, ledOn, char);
     reg [11:0] widthPos = 0;
     reg [11:0] heightPos = 0;
     
-    
     wire enable = ((widthPos >=50 & widthPos < 690) & (heightPos >=33 & heightPos < 513)) ? 1'b1: 1'b0;
-    // enable based on input character versus pixel region? 
-//  Square box in middle using enable    
-//    wire box_region = ((widthPos > 220 && widthPos < 241) && (heightPos > 140 && heightPos < 156)) ? 1'b1: 1'b0;
-//    wire box_region = ((widthPos > 390 && widthPos < 500) && (heightPos > 140 && heightPos < 156)) ? 1'b1: 1'b0;
     
     reg [0:19] bmap [0:14]; // 15 lines (elements), 20 bits each
     // Hello World bitmap
@@ -67,17 +60,11 @@ module helloworld_scaled(clk, h_sync, v_sync, ledOn, char);
     reg [3:0] y;
     always @* begin
         if (enable) begin
-//            x <= widthPos; 
-//            y <= heightPos; 
-
-//            x <= widthPos - 50;
-//            y <= heightPos - 33;
-
+            // Enable region begins at widthPos == 50 and heightPos == 33
+            // Active region is 640 x 480 while bitmap example is 20 x 15
+            // For consistent scaling, stretch width by 640/20 = 32 and height by 480/15 = 32 
             x <= ((widthPos - 50) / 32);
             y <= ((heightPos - 33) / 32);
-            
-//            x <= ((widthPos - 40) / 32);
-//            y <= ((heightPos - 23) / 32);
         end else begin
             x <= 0; 
             y <= 0; 
