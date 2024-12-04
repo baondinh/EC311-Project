@@ -56,8 +56,8 @@ module letter_decoder (
     reg [7:0] letter_buffer; // new inputed letter
     reg [1:0] current_position; // Keeps track of letter slot index
     
-//    reg flagDel = 0;
-//    reg flagEN = 0;
+    reg flagDel = 0;
+    reg flagEN = 0;
     
 // Letter decoder
 always @(*) begin
@@ -106,12 +106,12 @@ always @(posedge clk or posedge rst) begin
                 2'b00: begin
                     letter1 <= letter_buffer;
                     current_position <= 2'b01;
- //                   flagEN = 1;
+//                    flagEN = 1;
                 end
                 2'b01: begin
                     letter2 <= letter_buffer;
                     current_position <= 2'b10;
- //                   flagEN = 1;
+//                    flagEN = 1;
                 end
                 2'b10: begin
                     letter3 <= letter_buffer;
@@ -119,29 +119,30 @@ always @(posedge clk or posedge rst) begin
 //                    flagEN = 1;
                 end
             endcase
-//       end else if (del & ~flagDel) begin
-       end else if (del) begin
-            // Delete the last entered letter
-            case (current_position)
-                2'b10: begin
-                    letter3 <= " ";
-                    current_position <= 2'b01;
-//                    flagDel = 1;
-                end
-                2'b01: begin
-                    letter2 <= " ";
-                    current_position <= 2'b00;
-//                    flagDel = 1;
-                end
-                2'b00: begin
-                    letter1 <= " ";
-                    current_position <= 2'b00; // No more letters to delete
-//                    flagDel = 1;
-                end
-            endcase end
- //       end else if (~del) begin flagDel = 0;
-//        end else if (~en) begin flagEN = 0; end
+    end else if (del && !flagDel) begin
+        // Perform delete action based on current_position
+        case (current_position)
+            2'b10: begin
+                letter3 <= " ";          // Clear the third letter
+                //current_position <= 2'b01; // Move position back to letter2
+            end
+            2'b01: begin
+                letter2 <= " ";          // Clear the second letter
+                current_position <= 2'b00; // Move position back to letter1
+            end
+            2'b00: begin
+                letter1 <= " ";          // Clear the first letter
+                current_position <= 2'b00; // Remain at the start (no letters to delete)
+            end
+        endcase
+
+        flagDel <= 1'b1; // Set the flag to indicate delete action is in progress
+    end else if (!del) begin
+        flagDel <= 1'b0; // Reset the flag when delete button is released
     end
+
+        //end else if (~en) begin flagEN = 0; 
+        end
 endmodule
 
 

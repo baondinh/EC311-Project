@@ -66,17 +66,21 @@ module letter_decoder_tb;
         // Input: 'b' (tilt_input=00, switch_input=0001)
         en = 1; tilt_input = 2'b00; switch_input = 4'b0001; #10;
 
+
         // Input: 'c' (tilt_input=00, switch_input=0010)
         en = 1; tilt_input = 2'b00; switch_input = 4'b0010; #10;
         en = 0; # 10;
         // Delete 'b' and 'c' using DEL
         del = 1; #10;
         del = 0; #10;
+
         //Input: 'g' (tilt_input=00, switch_input=0110)
-        en = 1; tilt_input = 2'b00; switch_input = 4'b0110; #10;
-        
+       // en = 1; tilt_input = 2'b00; switch_input = 4'b1110; #10;
+        en = 1; tilt_input = 2'b00; switch_input = 4'b0110; #10;      
+        //en = 1; tilt_input = 2'b00; switch_input = 4'b0110; #10;   
+
         // Stop simulation
-        #10 $stop;
+         $stop;
     end
 
     // Monitor outputs

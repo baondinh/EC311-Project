@@ -1,0 +1,729 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Dec  3 14:40:48 2024
+# Process ID: 13584
+# Current directory: X:/EC311-Project/ProjectVivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7324 X:\EC311-Project\ProjectVivado\ProjectVivado.xpr
+# Log file: X:/EC311-Project/ProjectVivado/vivado.log
+# Journal file: X:/EC311-Project/ProjectVivado\vivado.jou
+# Running On        :ECE-PHO115-23
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-12700K
+# CPU Frequency     :3610 MHz
+# CPU Physical cores:12
+# CPU Logical cores :20
+# Host memory       :16853 MB
+# Swap memory       :5334 MB
+# Total Virtual     :22187 MB
+# Available Virtual :3118 MB
+#-----------------------------------------------------------
+start_gui
+open_project X:/EC311-Project/ProjectVivado/ProjectVivado.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'X:/EC311-Project/ProjectVivado/ProjectVivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1639.426 ; gain = 385.477
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+set_property top letter_decoder_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'letter_decoder_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'letter_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj letter_decoder_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.letter_decoder
+Compiling module xil_defaultlib.letter_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot letter_decoder_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "letter_decoder_tb_behav -key {Behavioral:sim_1:Functional:letter_decoder_tb} -tclbatch {letter_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source letter_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$stop called at time : 140 ns : File "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" Line 76
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'letter_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1726.266 ; gain = 22.379
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\vga_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'letter_decoder_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'letter_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj letter_decoder_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <letter_storage> not found while processing module instance <uut> [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v:32]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_project
+open_project X:/EC311-Project/ProjectVivado/ProjectVivado.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'X:/EC311-Project/ProjectVivado/ProjectVivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'letter_decoder_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'letter_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj letter_decoder_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <letter_storage> not found while processing module instance <uut> [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v:32]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'letter_decoder_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'letter_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj letter_decoder_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.letter_decoder
+Compiling module xil_defaultlib.letter_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot letter_decoder_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "letter_decoder_tb_behav -key {Behavioral:sim_1:Functional:letter_decoder_tb} -tclbatch {letter_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source letter_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time: 0 | EN: 0 | DEL: 0 | Input: (00, 0000) | Letter1:   | Letter2:   | Letter3:  
+Time: 10 | EN: 1 | DEL: 0 | Input: (00, 0011) | Letter1:   | Letter2:   | Letter3:  
+Time: 15 | EN: 1 | DEL: 0 | Input: (00, 0011) | Letter1: d | Letter2:   | Letter3:  
+Time: 20 | EN: 0 | DEL: 0 | Input: (00, 0000) | Letter1: d | Letter2:   | Letter3:  
+Time: 30 | EN: 1 | DEL: 0 | Input: (00, 1111) | Letter1: d | Letter2:   | Letter3:  
+Time: 35 | EN: 1 | DEL: 0 | Input: (00, 1111) | Letter1: d | Letter2: p | Letter3:  
+Time: 40 | EN: 1 | DEL: 0 | Input: (00, 0001) | Letter1: d | Letter2: p | Letter3:  
+Time: 45 | EN: 1 | DEL: 0 | Input: (00, 0001) | Letter1: d | Letter2: p | Letter3: b
+Time: 50 | EN: 1 | DEL: 0 | Input: (00, 0010) | Letter1: d | Letter2: p | Letter3: b
+Time: 60 | EN: 1 | DEL: 1 | Input: (00, 0010) | Letter1: d | Letter2: p | Letter3: b
+Time: 65 | EN: 1 | DEL: 1 | Input: (00, 0010) | Letter1: d | Letter2: p | Letter3:  
+Time: 75 | EN: 1 | DEL: 1 | Input: (00, 0010) | Letter1: d | Letter2:   | Letter3:  
+Time: 80 | EN: 1 | DEL: 0 | Input: (00, 0010) | Letter1: d | Letter2:   | Letter3:  
+Time: 85 | EN: 1 | DEL: 0 | Input: (00, 0010) | Letter1: d | Letter2: c | Letter3:  
+Time: 90 | EN: 1 | DEL: 0 | Input: (00, 0110) | Letter1: d | Letter2: c | Letter3:  
+Time: 95 | EN: 1 | DEL: 0 | Input: (00, 0110) | Letter1: d | Letter2: c | Letter3: g
+$stop called at time : 110 ns : File "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" Line 80
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'letter_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2818.410 ; gain = 30.520
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'letter_decoder_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'letter_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj letter_decoder_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder
+ERROR: [VRFC 10-2989] 'letter_buffer' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:79]
+ERROR: [VRFC 10-2989] 'letter_buffer' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:83]
+ERROR: [VRFC 10-2989] 'letter_buffer' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:87]
+ERROR: [VRFC 10-8530] module 'letter_decoder' is ignored due to previous errors [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'letter_decoder_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'letter_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj letter_decoder_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:39]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:40]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:41]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:42]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:43]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:44]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:45]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:46]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:47]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:48]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:49]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:50]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:51]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:52]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:53]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:54]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:55]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:56]
+ERROR: [VRFC 10-2989] 'letter' is not declared [X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v:57]
+INFO: [#UNDEF] Sorry, too many errors..
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'letter_decoder_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'letter_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj letter_decoder_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.letter_decoder
+Compiling module xil_defaultlib.letter_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot letter_decoder_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "letter_decoder_tb_behav -key {Behavioral:sim_1:Functional:letter_decoder_tb} -tclbatch {letter_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source letter_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time: 0 | EN: 0 | DEL: 0 | Input: (00, 0000) | Letter1:   | Letter2:   | Letter3:  
+Time: 10 | EN: 1 | DEL: 0 | Input: (00, 0011) | Letter1:   | Letter2:   | Letter3:  
+Time: 15 | EN: 1 | DEL: 0 | Input: (00, 0011) | Letter1: d | Letter2:   | Letter3:  
+Time: 20 | EN: 0 | DEL: 0 | Input: (00, 0000) | Letter1: d | Letter2:   | Letter3:  
+Time: 30 | EN: 1 | DEL: 0 | Input: (00, 1111) | Letter1: d | Letter2:   | Letter3:  
+Time: 35 | EN: 1 | DEL: 0 | Input: (00, 1111) | Letter1: d | Letter2: p | Letter3:  
+Time: 40 | EN: 1 | DEL: 0 | Input: (00, 0001) | Letter1: d | Letter2: p | Letter3:  
+Time: 45 | EN: 1 | DEL: 0 | Input: (00, 0001) | Letter1: d | Letter2: p | Letter3: b
+Time: 50 | EN: 1 | DEL: 0 | Input: (00, 0010) | Letter1: d | Letter2: p | Letter3: b
+Time: 55 | EN: 1 | DEL: 0 | Input: (00, 0010) | Letter1: d | Letter2: p | Letter3: c
+Time: 60 | EN: 1 | DEL: 1 | Input: (00, 0010) | Letter1: d | Letter2: p | Letter3: c
+Time: 80 | EN: 1 | DEL: 0 | Input: (00, 0010) | Letter1: d | Letter2: p | Letter3: c
+Time: 90 | EN: 1 | DEL: 0 | Input: (00, 0110) | Letter1: d | Letter2: p | Letter3: c
+Time: 95 | EN: 1 | DEL: 0 | Input: (00, 0110) | Letter1: d | Letter2: p | Letter3: g
+$stop called at time : 110 ns : File "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" Line 81
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'letter_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2818.410 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'letter_decoder_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'letter_decoder_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj letter_decoder_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module letter_decoder_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot letter_decoder_tb_behav xil_defaultlib.letter_decoder_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.letter_decoder
+Compiling module xil_defaultlib.letter_decoder_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot letter_decoder_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'X:/EC311-Project/ProjectVivado/ProjectVivado.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "letter_decoder_tb_behav -key {Behavioral:sim_1:Functional:letter_decoder_tb} -tclbatch {letter_decoder_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source letter_decoder_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time: 0 | EN: 0 | DEL: 0 | Input: (00, 0000) | Letter1:   | Letter2:   | Letter3:  
+Time: 10 | EN: 1 | DEL: 0 | Input: (00, 0011) | Letter1:   | Letter2:   | Letter3:  
+Time: 15 | EN: 1 | DEL: 0 | Input: (00, 0011) | Letter1: d | Letter2:   | Letter3:  
+Time: 20 | EN: 0 | DEL: 0 | Input: (00, 0000) | Letter1: d | Letter2:   | Letter3:  
+Time: 30 | EN: 1 | DEL: 0 | Input: (00, 1110) | Letter1: d | Letter2:   | Letter3:  
+Time: 35 | EN: 1 | DEL: 0 | Input: (00, 1110) | Letter1: d | Letter2: o | Letter3:  
+Time: 40 | EN: 1 | DEL: 0 | Input: (00, 0001) | Letter1: d | Letter2: o | Letter3:  
+Time: 45 | EN: 1 | DEL: 0 | Input: (00, 0001) | Letter1: d | Letter2: o | Letter3: b
+Time: 50 | EN: 1 | DEL: 0 | Input: (00, 0010) | Letter1: d | Letter2: o | Letter3: b
+Time: 55 | EN: 1 | DEL: 0 | Input: (00, 0010) | Letter1: d | Letter2: o | Letter3: c
+Time: 60 | EN: 1 | DEL: 1 | Input: (00, 0010) | Letter1: d | Letter2: o | Letter3: c
+Time: 80 | EN: 1 | DEL: 0 | Input: (00, 0010) | Letter1: d | Letter2: o | Letter3: c
+Time: 90 | EN: 1 | DEL: 0 | Input: (00, 0110) | Letter1: d | Letter2: o | Letter3: c
+Time: 95 | EN: 1 | DEL: 0 | Input: (00, 0110) | Letter1: d | Letter2: o | Letter3: g
+$stop called at time : 110 ns : File "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" Line 81
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'letter_decoder_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2818.410 ; gain = 0.000
+save_wave_config {X:/EC311-Project/ProjectVivado/letter_decoder_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse X:/EC311-Project/ProjectVivado/letter_decoder_tb_behav.wcfg
+set_property xsim.view X:/EC311-Project/ProjectVivado/letter_decoder_tb_behav.wcfg [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sim_1\new\letter_decoder_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [X:\EC311-Project\ProjectVivado\ProjectVivado.srcs\sources_1\new\letter_decoder.v:]
