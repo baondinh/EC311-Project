@@ -1,24 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/26/2024 01:56:20 PM
-// Design Name: 
-// Module Name: letter_decoder
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
@@ -47,8 +26,8 @@ module letter_decoder (
     input rst,// Reset signal (clears everything)
     input en,// Enable signal for input
     input del,// Delete signal
-    input [1:0] tilt_input,// 2-bit tilt input
-    input [3:0] switch_input,// 4-bit switch input
+   // input [1:0] tilt_input,// 2-bit tilt input
+    input [5:0] switch_input,// 6-bit switch input
     output reg [7:0] letter1,// First letter
     output reg [7:0] letter2,// Second letter
     output reg [7:0] letter3// Third letter
@@ -56,12 +35,12 @@ module letter_decoder (
     reg [7:0] letter_buffer; // new inputed letter
     reg [1:0] current_position; // Keeps track of letter slot index
     
-//    reg flagDel = 0;
-//    reg flagEN = 0;
+    reg flagDel = 0;
+    reg flagEN = 0;
     
 // Letter decoder
 always @(*) begin
-    case ({tilt_input, switch_input})  // Concatenate tilt_input and switch_input
+    case (switch_input)  // Concatenate tilt_input and switch_input
         6'b000000: letter_buffer = "a"; // ASCII 97
         6'b000001: letter_buffer = "b"; // ASCII 98
         6'b000010: letter_buffer = "c"; // ASCII 99
@@ -106,12 +85,12 @@ always @(posedge clk or posedge rst) begin
                 2'b00: begin
                     letter1 <= letter_buffer;
                     current_position <= 2'b01;
- //                   flagEN = 1;
+//                    flagEN = 1;
                 end
                 2'b01: begin
                     letter2 <= letter_buffer;
                     current_position <= 2'b10;
- //                   flagEN = 1;
+//                    flagEN = 1;
                 end
                 2'b10: begin
                     letter3 <= letter_buffer;
@@ -119,31 +98,30 @@ always @(posedge clk or posedge rst) begin
 //                    flagEN = 1;
                 end
             endcase
-//       end else if (del & ~flagDel) begin
-       end else if (del) begin
-            // Delete the last entered letter
-            case (current_position)
-                2'b10: begin
-                    letter3 <= " ";
-                    current_position <= 2'b01;
-//                    flagDel = 1;
-                end
-                2'b01: begin
-                    letter2 <= " ";
-                    current_position <= 2'b00;
-//                    flagDel = 1;
-                end
-                2'b00: begin
-                    letter1 <= " ";
-                    current_position <= 2'b00; // No more letters to delete
-//                    flagDel = 1;
-                end
-            endcase end
- //       end else if (~del) begin flagDel = 0;
-//        end else if (~en) begin flagEN = 0; end
+    end else if (del && !flagDel) begin
+        // Perform delete action based on current_position
+        case (current_position)
+            2'b10: begin
+                letter3 <= " ";          // Clear the third letter
+                //current_position <= 2'b01; // Move position back to letter2
+            end
+            2'b01: begin
+                letter2 <= " ";          // Clear the second letter
+                current_position <= 2'b00; // Move position back to letter1
+            end
+            2'b00: begin
+                letter1 <= " ";          // Clear the first letter
+                current_position <= 2'b00; // Remain at the start (no letters to delete)
+            end
+        endcase
+
+        flagDel <= 1'b1; // Set the flag to indicate delete action is in progress
+    end else if (!del) begin
+        flagDel <= 1'b0; // Reset the flag when delete button is released
     end
+
+        //end else if (~en) begin flagEN = 0; 
+        end
 endmodule
-
-
 
 
