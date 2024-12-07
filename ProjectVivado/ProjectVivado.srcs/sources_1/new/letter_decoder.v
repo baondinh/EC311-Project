@@ -47,8 +47,8 @@ module letter_decoder (
     input rst,// Reset signal (clears everything)
     input en,// Enable signal for input
     input del,// Delete signal
-    input [1:0] tilt_input,// 2-bit tilt input
-    input [3:0] switch_input,// 4-bit switch input
+   // input [1:0] tilt_input,// 2-bit tilt input
+    input [5:0] switch_input,// 6-bit switch input
     output reg [7:0] letter1,// First letter
     output reg [7:0] letter2,// Second letter
     output reg [7:0] letter3// Third letter
@@ -61,7 +61,7 @@ module letter_decoder (
     
 // Letter decoder
 always @(*) begin
-    case ({tilt_input, switch_input})  // Concatenate tilt_input and switch_input
+    case (switch_input)  // Concatenate tilt_input and switch_input
         6'b000000: letter_buffer = "a"; // ASCII 97
         6'b000001: letter_buffer = "b"; // ASCII 98
         6'b000010: letter_buffer = "c"; // ASCII 99
