@@ -1,8 +1,33 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 12/07/2024 05:22:10 PM
+// Design Name: 
+// Module Name: vga_controller
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
-module vga_controller(clk, h_sync, v_sync, led_on);
+`timescale 1ns / 1ps
+
+module vga_controller_ONE(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE, h_sync, v_sync, led_on);
     
     input clk;
+    input wire [0:7] letter_sel_ONE;
+    input wire [0:7] letter_sel_TWO;
+    input wire [0:7] letter_sel_THREE;
+    
     output reg h_sync, v_sync, led_on;
     
     localparam TOTAL_WIDTH = 800;
@@ -17,41 +42,82 @@ module vga_controller(clk, h_sync, v_sync, led_on);
     
     wire enable = ((widthPos >=50 & widthPos < 690) & (heightPos >=33 & heightPos < 513)) ? 1'b1: 1'b0;
     
-    wire bmapenable = ((widthPos >= 50 & widthPos <= 129) & ( heightPos >= 33 & heightPos <= 60)) ? 1'b1: 1'b0;
+    wire bmapenableONE = ((widthPos >= 20 & widthPos <= 219) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
+    wire bmapenableTWO = ((widthPos >= 220 & widthPos <= 419) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
+    wire bmapenableTHREE = ((widthPos >= 420 & widthPos <= 619) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
+    
+    // Help from Fadi on this code. Displaying two characters at once without two separate vga_controllers
+    wire [0:7] curr_letter_sel;
+    assign curr_letter_sel = bmapenableONE ? letter_sel_ONE : (bmapenableTWO ? letter_sel_TWO : letter_sel_THREE);
 
-    reg [0:79] bmap [0:27];
+    reg [2:0] x;
+    reg [3:0] y; 
+
+    reg [0:7] bmap [0:15];
     
-    initial begin
-    bmap[0]   = 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000;
-    bmap[1]   = 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000;
-    bmap[2]   = 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000;
-    bmap[3]   = 80'b00000000000000000000111111111111111111111111111111111111111100000000000000000000;
-    bmap[4]   = 80'b00000000000000000000111111111111111111111111111111111111111100000000000000000000;
-    bmap[5]   = 80'b00000000000000000000111111111111111111111111111111111111111100000000000000000000;
-    bmap[6]   = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[7]   = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[8]   = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[9]   = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[10]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[11]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[12]  = 80'b00000000001111111111111111111111111111111111111111111111111111111111110000000000;
-    bmap[13]  = 80'b00000000001111111111111111111111111111111111111111111111111111111111110000000000;
-    bmap[14]  = 80'b00000000001111111111111111111111111111111111111111111111111111111111110000000000;
-    bmap[15]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[16]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[17]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[18]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[19]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[20]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[21]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[22]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[23]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[24]  = 80'b00000000001111111111111111111100000000000000000000111111111111111111110000000000;
-    bmap[25]  = 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000;
-    bmap[26]  = 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000;
-    bmap[27]  = 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000;
-    end
-    
+        initial
+        begin
+        bmap[0]   = 8'b00000000;
+        bmap[1]   = 8'b00000000;
+        bmap[2]   = 8'b00010000;
+        bmap[3]   = 8'b00111000;
+        bmap[4]   = 8'b01101100;
+        bmap[5]   = 8'b11000110;
+        bmap[6]   = 8'b11000110;
+        bmap[7]   = 8'b11111110;
+        bmap[8]   = 8'b11111110;
+        bmap[9]   = 8'b11000110;
+        bmap[10]  = 8'b11000110;
+        bmap[11]  = 8'b11000110;
+        bmap[12]  = 8'b00000000;
+        bmap[13]  = 8'b00000000;
+        bmap[14]  = 8'b00000000;
+        bmap[15]  = 8'b00000000;
+        end
+        
+        always @(posedge clk)
+        case (curr_letter_sel)
+        8'b01010001:
+        begin
+        	bmap[0] =  8'b00000000;	//
+			bmap[1] =  8'b00000000;	//
+			bmap[2] =  8'b11111100;	// *****
+			bmap[3] =  8'b11111110;	//*******
+			bmap[4] =  8'b11000110;	//**   **
+			bmap[5] =  8'b11000110;	//**   **
+			bmap[6] =  8'b11000110;	//**   **
+			bmap[7] =  8'b11000110;	//**   **  
+			bmap[8]  = 8'b11010110;	//** * **
+			bmap[9] =  8'b11111110;	//*******
+			bmap[10] = 8'b01101100;	// ** ** 
+			bmap[11] = 8'b00000110;	//     **
+			bmap[12] = 8'b00000000;	//
+			bmap[13] = 8'b00000000;	//
+			bmap[14] = 8'b00000000;	//
+			bmap[15] = 8'b00000000;	//
+        end
+        
+        8'b01001001:
+        begin
+            bmap[0] = 8'b00000000;	//
+			bmap[1] = 8'b00000000;	//
+			bmap[2] = 8'b11111110;	//*******
+			bmap[3] = 8'b11111110;	//*******
+			bmap[4] = 8'b00110000;	//  **
+			bmap[5] = 8'b00110000;	//  **
+			bmap[6] = 8'b00110000;	//  **
+			bmap[7] = 8'b00110000;	//  **
+			bmap[8] = 8'b00110000;	//  **
+			bmap[9] = 8'b00110000;	//  **
+			bmap[10] = 8'b11111110;	//*******
+			bmap[11] = 8'b11111110;	//*******
+			bmap[12] = 8'b00000000;	//
+			bmap[13] = 8'b00000000;	//
+			bmap[14] = 8'b00000000;	//
+			bmap[15] = 8'b00000000;	//
+        end
+        endcase
+   
     // Following always block ensures that 
     // you go through all pixel coordinates
     always@(posedge clk)
@@ -102,24 +168,40 @@ module vga_controller(clk, h_sync, v_sync, led_on);
         end
    end
     
+//    wire bmapenableONE = ((widthPos >= 20 & widthPos <= 219) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
+//    wire bmapenableTWO = ((widthPos >= 220 & widthPos <= 419) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
+//    wire bmapenableTHREE = ((widthPos >= 420 & widthPos <= 619) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
+    
+    always @(*) begin
+        if (bmapenableONE) begin
+            x <= (widthPos - 20)/25;
+            y <= (heightPos - 160)/10;
+        end
+        else 
+            begin
+        x <= 0;
+        y <= 0;
+        end
+    end
+    
     // this is you main logic based on 
     // your project
+   
     always@(posedge clk)
     begin
-        if(enable) // in bounds 
-        begin
-            if (bmapenable) // if can traverse over bmp
-            begin
-                if (bmap[widthPos - 50][heightPos - 33])
-                begin
-                    led_on <= 1'b1;
-                end
+        if(enable & bmapenableONE)
+            begin   
+            led_on <= bmap[y][x];
             end
-        end
+        else if (enable & bmapenableTWO)
+            begin   
+            led_on <= bmap[y][x];
+            end
         else
-        begin
+            begin
             led_on <= 1'b0;
-        end 
-   end   
+            end
+     end
+    
         
 endmodule
