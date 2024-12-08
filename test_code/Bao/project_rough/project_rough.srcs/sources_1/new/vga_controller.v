@@ -54,6 +54,15 @@ module vga_controller(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE, h_s
     reg [3:0] y; 
 
     reg [0:7] bmap [0:15];
+    
+//    initial begin
+//        widthPos = 0; 
+//        heightPos = 0;
+        
+//        letter_sel_ONE = 0;
+//        letter_sel_TWO = 0;
+//        letter_sel_THREE = 0;
+//    end
         
     always @(posedge clk) begin
         case (curr_letter_sel)

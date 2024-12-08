@@ -227,7 +227,7 @@ module letter_decoder (
     end
 
     // Sequential Logic for Buffer Management
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk) begin
         if (rst) begin
             letter1 <= " ";
             letter2 <= " ";
