@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='X:/EC311-Project/test_code/Percy/displayMonday.runs/impl_1'
+HD_PWD='X:/EC311-Project/test_code/Kelsey/displayMonday.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

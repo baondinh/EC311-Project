@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "X:/EC311-Project/test_code/Percy/displayMonday.runs/impl_1/vga_top.tcl"
+  variable script "X:/EC311-Project/test_code/Kelsey/displayMonday.runs/impl_1/vga_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -112,15 +112,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir X:/EC311-Project/test_code/Percy/displayMonday.cache/wt [current_project]
-  set_property parent.project_path X:/EC311-Project/test_code/Percy/displayMonday.xpr [current_project]
-  set_property ip_output_repo X:/EC311-Project/test_code/Percy/displayMonday.cache/ip [current_project]
+  set_property webtalk.parent_dir X:/EC311-Project/test_code/Kelsey/displayMonday.cache/wt [current_project]
+  set_property parent.project_path X:/EC311-Project/test_code/Kelsey/displayMonday.xpr [current_project]
+  set_property ip_output_repo X:/EC311-Project/test_code/Kelsey/displayMonday.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet X:/EC311-Project/test_code/Percy/displayMonday.runs/synth_1/vga_top.dcp
+  add_files -quiet X:/EC311-Project/test_code/Kelsey/displayMonday.runs/synth_1/vga_top.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc X:/EC311-Project/test_code/Percy/constraints.xdc
+  read_xdc X:/EC311-Project/test_code/Kelsey/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

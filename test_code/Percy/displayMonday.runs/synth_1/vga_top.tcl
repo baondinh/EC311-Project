@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "X:/EC311-Project/test_code/Percy/displayMonday.runs/synth_1/vga_top.tcl"
+  variable script "X:/EC311-Project/test_code/Kelsey/displayMonday.runs/synth_1/vga_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -62,18 +62,18 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir X:/EC311-Project/test_code/Percy/displayMonday.cache/wt [current_project]
-set_property parent.project_path X:/EC311-Project/test_code/Percy/displayMonday.xpr [current_project]
+set_property webtalk.parent_dir X:/EC311-Project/test_code/Kelsey/displayMonday.cache/wt [current_project]
+set_property parent.project_path X:/EC311-Project/test_code/Kelsey/displayMonday.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo x:/EC311-Project/test_code/Percy/displayMonday.cache/ip [current_project]
+set_property ip_output_repo x:/EC311-Project/test_code/Kelsey/displayMonday.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  X:/EC311-Project/test_code/Percy/clk_divider.v
-  X:/EC311-Project/test_code/Percy/vga_controller.v
-  X:/EC311-Project/test_code/Percy/vga_top.v
+  X:/EC311-Project/test_code/Kelsey/clk_divider.v
+  X:/EC311-Project/test_code/Kelsey/vga_controller.v
+  X:/EC311-Project/test_code/Kelsey/vga_top.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -84,12 +84,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc X:/EC311-Project/test_code/Percy/constraints.xdc
-set_property used_in_implementation false [get_files X:/EC311-Project/test_code/Percy/constraints.xdc]
+read_xdc X:/EC311-Project/test_code/Kelsey/constraints.xdc
+set_property used_in_implementation false [get_files X:/EC311-Project/test_code/Kelsey/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental X:/EC311-Project/test_code/Percy/displayMonday.srcs/utils_1/imports/synth_1/vga_top.dcp
+read_checkpoint -auto_incremental -incremental X:/EC311-Project/test_code/Kelsey/displayMonday.srcs/utils_1/imports/synth_1/vga_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

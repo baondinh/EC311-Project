@@ -2,3 +2,6 @@ Running: xsim.dir/vga_top_behav/xsimk.exe -simmode gui -wdb vga_top_behav.wdb -s
 Design successfully loaded
 Design Loading Memory Usage: 8620 KB (Peak: 8620 KB)
 Design Loading CPU Usage: 78 ms
+Simulation completed
+Simulation Memory Usage: 9172 KB (Peak: 9172 KB)
+Simulation CPU Usage: 93 ms

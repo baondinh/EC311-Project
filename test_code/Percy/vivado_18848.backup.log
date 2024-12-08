@@ -115,3 +115,7 @@ launch_runs impl_1 -to_step write_bitstream -jobs 10
 Run output will be captured here: X:/EC311-Project/test_code/Kelsey/displayMonday.runs/synth_1/runme.log
 [Sat Dec  7 17:59:51 2024] Launched impl_1...
 Run output will be captured here: X:/EC311-Project/test_code/Kelsey/displayMonday.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  7 18:01:50 2024...

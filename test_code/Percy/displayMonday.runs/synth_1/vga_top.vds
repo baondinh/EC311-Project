@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sat Dec  7 18:02:39 2024
-# Process ID: 18976
-# Current directory: X:/EC311-Project/test_code/Percy/displayMonday.runs/synth_1
+# Start of session at: Sat Dec  7 17:59:53 2024
+# Process ID: 16792
+# Current directory: X:/EC311-Project/test_code/Kelsey/displayMonday.runs/synth_1
 # Command line: vivado.exe -log vga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_top.tcl
-# Log file: X:/EC311-Project/test_code/Percy/displayMonday.runs/synth_1/vga_top.vds
-# Journal file: X:/EC311-Project/test_code/Percy/displayMonday.runs/synth_1\vivado.jou
+# Log file: X:/EC311-Project/test_code/Kelsey/displayMonday.runs/synth_1/vga_top.vds
+# Journal file: X:/EC311-Project/test_code/Kelsey/displayMonday.runs/synth_1\vivado.jou
 # Running On        :ECE-PHO115-22
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :19045
@@ -19,9 +19,10 @@
 # Host memory       :16853 MB
 # Swap memory       :2550 MB
 # Total Virtual     :19403 MB
-# Available Virtual :6385 MB
+# Available Virtual :6224 MB
 #-----------------------------------------------------------
 source vga_top.tcl -notrace
-Command: read_checkpoint -auto_incremental -incremental X:/EC311-Project/test_code/Percy/displayMonday.srcs/utils_1/imports/synth_1/vga_top.dcp
-ERROR: [Common 17-69] Command failed: File 'X:/EC311-Project/test_code/Percy/displayMonday.srcs/utils_1/imports/synth_1/vga_top.dcp' does not exist
-INFO: [Common 17-206] Exiting Vivado at Sat Dec  7 18:02:47 2024...
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 631.129 ; gain = 200.492
+Command: read_checkpoint -auto_incremental -incremental X:/EC311-Project/test_code/Kelsey/displayMonday.srcs/utils_1/imports/synth_1/vga_top.dcp
+ERROR: [Common 17-69] Command failed: File 'X:/EC311-Project/test_code/Kelsey/displayMonday.srcs/utils_1/imports/synth_1/vga_top.dcp' does not exist
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  7 18:00:02 2024...
