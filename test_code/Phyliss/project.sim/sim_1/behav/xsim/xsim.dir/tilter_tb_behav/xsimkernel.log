@@ -1,0 +1,4 @@
+Running: xsim.dir/tilter_tb_behav/xsimk.exe -simmode gui -wdb tilter_tb_behav.wdb -simrunnum 0 -socket 63880
+Design successfully loaded
+Design Loading Memory Usage: 8928 KB (Peak: 8928 KB)
+Design Loading CPU Usage: 31 ms
