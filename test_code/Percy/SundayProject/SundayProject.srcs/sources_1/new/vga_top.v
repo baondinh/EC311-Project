@@ -19,14 +19,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module vga_top(clk, reset, en, del, switch_input, vga_r, vga_g, vga_b, h_sync, v_sync, tilt_y);
+module vga_top(clk, reset, en, del, switch_input, vga_r, vga_g, vga_b, h_sync, v_sync, miso, sclk, mosi, cs, acl_data);
 //module vga_top(clk, reset, en, del, switch_input, vga_r, vga_g, vga_b, h_sync, v_sync);
 //module vga_top(clk, reset, en, del, switch_input, vga_r, vga_g, vga_b, h_sync, v_sync);
 
     input clk, reset, en, del;
     input [5:0] switch_input;
     reg [1:0] letter_index=2'b00;
-    input [1:0] tilt_y;    
+    reg [1:0] tilt_y;    
     output reg [3:0] vga_r, vga_g, vga_b;
     output h_sync, v_sync;
     reg [3:0] color1, color2, color3;
@@ -34,16 +34,24 @@ module vga_top(clk, reset, en, del, switch_input, vga_r, vga_g, vga_b, h_sync, v
     wire [5:0] letter1;
     wire [5:0] letter2;
     wire [5:0] letter3;
+    input miso;                 // master in
+	output sclk;				// 1MHz
+    output reg mosi = 1'b0;     // master out
+    output reg cs = 1'b1;       // slave chip select
+    output [14:0] acl_data;     // 15 bit data, 5 each axis
     
     // CLK DIVIDER FROM 100MHz -> 25 MHz
     clk_divider clkDiv (clk, reset, newClk);
     
+    accelerometer accel(newClk, miso, sclk, mosi, cs, acl_data);
+    acl_data_decoder decoder1(newClk, acl_data, tilt_y);
+    
     debouncer debEN(clk, en, clean_en);
     debouncer debDEL(clk, del, clean_del);
-    
+
     letter_decoder ltrD(clk, reset, clean_en, clean_del, switch_input, letter1, letter2, letter3);
 
-    vga_controller vga_con(newClk, letter1, letter2, letter3, h_sync, v_sync, ledOn, char, tilt_y,letter_index);
+    vga_controller vga_con(newClk, letter1, letter2, letter3, h_sync, v_sync, ledOn, char, tilt_y, letter_index);
         
     always@(posedge newClk) begin
         vga_r <= (ledOn) ? (char ? 255: 0) : 0; 

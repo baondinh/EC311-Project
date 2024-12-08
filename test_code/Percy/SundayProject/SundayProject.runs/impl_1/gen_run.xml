@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733694386">
-  <File Type="ROUTE-PWR" Name="vga_top_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="vga_top.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="vga_top_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="vga_top_reports.tcl"/>
-  <File Type="OPT-RQA-PB" Name="vga_top_rqa_opted.pb"/>
-  <File Type="BITSTR-MMI" Name="vga_top.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="vga_top_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="vga_top_timing_summary_init.rpt"/>
-  <File Type="OPT-TIMING" Name="vga_top_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="vga_top_opt.dcp"/>
-  <File Type="OPT-DRC" Name="vga_top_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="vga_top.hwdef"/>
-  <File Type="PWROPT-DCP" Name="vga_top_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="vga_top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="vga_top_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="vga_top_placed.dcp"/>
-  <File Type="PLACE-IO" Name="vga_top_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="vga_top_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="vga_top_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="vga_top_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="vga_top_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="vga_top_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="vga_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="vga_top.bin"/>
-  <File Type="PLACE-TIMING" Name="vga_top_timing_summary_placed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="vga_top_power_routed.rpx"/>
-  <File Type="PLACE-RQA-PB" Name="vga_top_rqa_placed.pb"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="vga_top_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="vga_top.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="vga_top_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="vga_top_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="vga_top_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="vga_top.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="vga_top_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="vga_top_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="vga_top_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="vga_top_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="vga_top_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="vga_top_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="vga_top_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="vga_top_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="vga_top_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="vga_top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-RQS-PB" Name="vga_top_rqs_routed.pb"/>
-  <File Type="ROUTE-STATUS" Name="vga_top_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="vga_top_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="vga_top_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="vga_top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="vga_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="vga_top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="vga_top_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="vga_top_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="vga_top_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="vga_top_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="vga_top_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="vga_top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="vga_top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="vga_top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="vga_top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="vga_top_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="vga_top.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="vga_top_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="vga_top_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="vga_top.nky"/>
-  <File Type="BITSTR-BMM" Name="vga_top_bd.bmm"/>
-  <File Type="PDI-FILE" Name="vga_top.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="vga_top_boot.pdi"/>
-  <File Type="PL-PDI-FILE" Name="vga_top_pld.pdi"/>
-  <File Type="RCFI_FILE" Name="vga_top.rcfi"/>
-  <File Type="CFI_FILE" Name="vga_top.cfi"/>
-  <File Type="RNPI_FILE" Name="vga_top.rnpi"/>
-  <File Type="NPI_FILE" Name="vga_top.npi"/>
-  <File Type="RBD_FILE" Name="vga_top.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733700165">
+  <File Type="ROUTE-PWR" Name="acctop_module_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="acctop_module.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="acctop_module_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="acctop_module_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="acctop_module_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="acctop_module.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="acctop_module_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="acctop_module_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="acctop_module_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="acctop_module_opt.dcp"/>
+  <File Type="OPT-DRC" Name="acctop_module_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="acctop_module.hwdef"/>
+  <File Type="PWROPT-DCP" Name="acctop_module_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="acctop_module_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="acctop_module_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="acctop_module_placed.dcp"/>
+  <File Type="PLACE-IO" Name="acctop_module_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="acctop_module_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="acctop_module_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="acctop_module_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="acctop_module_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="acctop_module_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="acctop_module_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="acctop_module.bin"/>
+  <File Type="PLACE-TIMING" Name="acctop_module_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="acctop_module_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="acctop_module_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="acctop_module_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="acctop_module.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="acctop_module_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="acctop_module_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="acctop_module_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="acctop_module.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="acctop_module_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="acctop_module_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="acctop_module_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="acctop_module_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="acctop_module_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="acctop_module_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="acctop_module_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="acctop_module_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="acctop_module_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="acctop_module_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="acctop_module_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="acctop_module_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="acctop_module_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="acctop_module_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="acctop_module_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="acctop_module_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="acctop_module_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="acctop_module_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="acctop_module_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="acctop_module_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="acctop_module_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="acctop_module_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="acctop_module_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="acctop_module_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="acctop_module_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="acctop_module_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="acctop_module_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="acctop_module.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="acctop_module_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="acctop_module_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="acctop_module.nky"/>
+  <File Type="BITSTR-BMM" Name="acctop_module_bd.bmm"/>
+  <File Type="PDI-FILE" Name="acctop_module.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="acctop_module_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="acctop_module_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="acctop_module.rcfi"/>
+  <File Type="CFI_FILE" Name="acctop_module.cfi"/>
+  <File Type="RNPI_FILE" Name="acctop_module.rnpi"/>
+  <File Type="NPI_FILE" Name="acctop_module.npi"/>
+  <File Type="RBD_FILE" Name="acctop_module.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="vga_top.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="vga_top.sysdef"/>
-  <File Type="BG-BGN" Name="vga_top.bgn"/>
-  <File Type="BG-DRC" Name="vga_top.drc"/>
-  <File Type="RDI-RDI" Name="vga_top.vdi"/>
+  <File Type="BITSTR-LTX" Name="acctop_module.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="acctop_module.sysdef"/>
+  <File Type="BG-BGN" Name="acctop_module.bgn"/>
+  <File Type="BG-DRC" Name="acctop_module.drc"/>
+  <File Type="RDI-RDI" Name="acctop_module.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="ROUTE-RQS" Name="vga_top_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="vga_top_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="acctop_module_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="acctop_module_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
@@ -121,9 +121,51 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../Bao/accelerometer/seg7_control.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Bao/accelerometer/iclk_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Bao/accelerometer/accelerometer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Bao/accelerometer/accelerometer_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/acl_data_decoder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/acctop_module.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="vga_top"/>
+      <Option Name="TopModule" Val="acctop_module"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -153,9 +195,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

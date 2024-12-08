@@ -1,0 +1,452 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Dec  8 18:22:47 2024
+# Process ID: 32252
+# Current directory: X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.runs/synth_1
+# Command line: vivado.exe -log acctop_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source acctop_module.tcl
+# Log file: X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.runs/synth_1/acctop_module.vds
+# Journal file: X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.runs/synth_1\vivado.jou
+# Running On        :ECE-PHO115-23
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-12700K
+# CPU Frequency     :3610 MHz
+# CPU Physical cores:12
+# CPU Logical cores :20
+# Host memory       :16853 MB
+# Swap memory       :10685 MB
+# Total Virtual     :27539 MB
+# Available Virtual :4637 MB
+#-----------------------------------------------------------
+source acctop_module.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/utils_1/imports/synth_1/vga_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/utils_1/imports/synth_1/vga_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top acctop_module -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19836
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1495.863 ; gain = 446.484
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'clean_en', assumed default net type 'wire' [X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/sources_1/new/vga_top.v:49]
+INFO: [Synth 8-11241] undeclared symbol 'clean_del', assumed default net type 'wire' [X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/sources_1/new/vga_top.v:50]
+INFO: [Synth 8-6157] synthesizing module 'acctop_module' [X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/sources_1/new/acctop_module.v:23]
+INFO: [Synth 8-6157] synthesizing module 'accelerometer' [X:/EC311-Project/test_code/Bao/accelerometer/accelerometer.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/EC311-Project/test_code/Bao/accelerometer/accelerometer.v:198]
+INFO: [Synth 8-6155] done synthesizing module 'accelerometer' (0#1) [X:/EC311-Project/test_code/Bao/accelerometer/accelerometer.v:45]
+INFO: [Synth 8-6157] synthesizing module 'acl_data_decoder' [X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/sources_1/new/acl_data_decoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'acl_data_decoder' (0#1) [X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/sources_1/new/acl_data_decoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'acctop_module' (0#1) [X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/sources_1/new/acctop_module.v:23]
+WARNING: [Synth 8-7129] Port acl_data[14] in module acl_data_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port acl_data[13] in module acl_data_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port acl_data[12] in module acl_data_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port acl_data[11] in module acl_data_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port acl_data[10] in module acl_data_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port acl_data[4] in module acl_data_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port acl_data[3] in module acl_data_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port acl_data[2] in module acl_data_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port acl_data[1] in module acl_data_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port acl_data[0] in module acl_data_decoder is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1613.848 ; gain = 564.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1613.848 ; gain = 564.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1613.848 ; gain = 564.469
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1613.848 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'switch_input[0]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch_input[1]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch_input[2]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch_input[3]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch_input[4]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch_input[5]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'del'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_r[0]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_r[1]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_r[2]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:157]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:157]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_r[3]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_g[0]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:160]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:160]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_g[1]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_g[2]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_g[3]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_b[0]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_b[1]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_b[2]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_b[3]'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'h_sync'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'v_sync'. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc:171]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [X:/EC311-Project/test_code/Percy/SundayProject/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1615.164 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1615.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1615.164 ; gain = 565.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1615.164 ; gain = 565.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1615.164 ; gain = 565.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/utils_1/imports/synth_1/vga_top.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1615.164 ; gain = 565.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1615.164 ; gain = 565.785
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'accelerometer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                POWER_UP |                          0000000 |                          0000000
+              BEGIN_SPIW |                          0000001 |                          0000001
+              SEND_WCMD7 |                          0000010 |                          0000010
+              SEND_WCMD6 |                          0000011 |                          0000011
+              SEND_WCMD5 |                          0000100 |                          0000100
+              SEND_WCMD4 |                          0000101 |                          0000101
+              SEND_WCMD3 |                          0000110 |                          0000110
+              SEND_WCMD2 |                          0000111 |                          0000111
+              SEND_WCMD1 |                          0001000 |                          0001000
+              SEND_WCMD0 |                          0001001 |                          0001001
+             SEND_WADDR7 |                          0001010 |                          0001010
+             SEND_WADDR6 |                          0001011 |                          0001011
+             SEND_WADDR5 |                          0001100 |                          0001100
+             SEND_WADDR4 |                          0001101 |                          0001101
+             SEND_WADDR3 |                          0001110 |                          0001110
+             SEND_WADDR2 |                          0001111 |                          0001111
+             SEND_WADDR1 |                          0010000 |                          0010000
+             SEND_WADDR0 |                          0010001 |                          0010001
+              SEND_BYTE7 |                          0010010 |                          0010010
+              SEND_BYTE6 |                          0010011 |                          0010011
+              SEND_BYTE5 |                          0010100 |                          0010100
+              SEND_BYTE4 |                          0010101 |                          0010101
+              SEND_BYTE3 |                          0010110 |                          0010110
+              SEND_BYTE2 |                          0010111 |                          0010111
+              SEND_BYTE1 |                          0011000 |                          0011000
+              SEND_BYTE0 |                          0011001 |                          0011001
+                    WAIT |                          0011010 |                          0011010
+              BEGIN_SPIR |                          0011011 |                          0011011
+              SEND_RCMD7 |                          0011100 |                          0011100
+              SEND_RCMD6 |                          0011101 |                          0011101
+              SEND_RCMD5 |                          0011110 |                          0011110
+              SEND_RCMD4 |                          0011111 |                          0011111
+              SEND_RCMD3 |                          0100000 |                          0100000
+              SEND_RCMD2 |                          0100001 |                          0100001
+              SEND_RCMD1 |                          0100010 |                          0100010
+              SEND_RCMD0 |                          0100011 |                          0100011
+             SEND_RADDR7 |                          0100100 |                          0100100
+             SEND_RADDR6 |                          0100101 |                          0100101
+             SEND_RADDR5 |                          0100110 |                          0100110
+             SEND_RADDR4 |                          0100111 |                          0100111
+             SEND_RADDR3 |                          0101000 |                          0101000
+             SEND_RADDR2 |                          0101001 |                          0101001
+             SEND_RADDR1 |                          0101010 |                          0101010
+             SEND_RADDR0 |                          0101011 |                          0101011
+               REC_XLSB7 |                          0101100 |                          0101100
+               REC_XLSB6 |                          0101101 |                          0101101
+               REC_XLSB5 |                          0101110 |                          0101110
+               REC_XLSB4 |                          0101111 |                          0101111
+               REC_XLSB3 |                          0110000 |                          0110000
+               REC_XLSB2 |                          0110001 |                          0110001
+               REC_XLSB1 |                          0110010 |                          0110010
+               REC_XLSB0 |                          0110011 |                          0110011
+               REC_XMSB7 |                          0110100 |                          0110100
+               REC_XMSB6 |                          0110101 |                          0110101
+               REC_XMSB5 |                          0110110 |                          0110110
+               REC_XMSB4 |                          0110111 |                          0110111
+               REC_XMSB3 |                          0111000 |                          0111000
+               REC_XMSB2 |                          0111001 |                          0111001
+               REC_XMSB1 |                          0111010 |                          0111010
+               REC_XMSB0 |                          0111011 |                          0111011
+               REC_YLSB7 |                          0111100 |                          0111100
+               REC_YLSB6 |                          0111101 |                          0111101
+               REC_YLSB5 |                          0111110 |                          0111110
+               REC_YLSB4 |                          0111111 |                          0111111
+               REC_YLSB3 |                          1000000 |                          1000000
+               REC_YLSB2 |                          1000001 |                          1000001
+               REC_YLSB1 |                          1000010 |                          1000010
+               REC_YLSB0 |                          1000011 |                          1000011
+               REC_YMSB7 |                          1000100 |                          1000100
+               REC_YMSB6 |                          1000101 |                          1000101
+               REC_YMSB5 |                          1000110 |                          1000110
+               REC_YMSB4 |                          1000111 |                          1000111
+               REC_YMSB3 |                          1001000 |                          1001000
+               REC_YMSB2 |                          1001001 |                          1001001
+               REC_YMSB1 |                          1001010 |                          1001010
+               REC_YMSB0 |                          1001011 |                          1001011
+               REC_ZLSB7 |                          1001100 |                          1001100
+               REC_ZLSB6 |                          1001101 |                          1001101
+               REC_ZLSB5 |                          1001110 |                          1001110
+               REC_ZLSB4 |                          1001111 |                          1001111
+               REC_ZLSB3 |                          1010000 |                          1010000
+               REC_ZLSB2 |                          1010001 |                          1010001
+               REC_ZLSB1 |                          1010010 |                          1010010
+               REC_ZLSB0 |                          1010011 |                          1010011
+               REC_ZMSB7 |                          1010100 |                          1010100
+               REC_ZMSB6 |                          1010101 |                          1010101
+               REC_ZMSB5 |                          1010110 |                          1010110
+               REC_ZMSB4 |                          1010111 |                          1010111
+               REC_ZMSB3 |                          1011000 |                          1011000
+               REC_ZMSB2 |                          1011001 |                          1011001
+               REC_ZMSB1 |                          1011010 |                          1011010
+               REC_ZMSB0 |                          1011011 |                          1011011
+                 END_SPI |                          1011100 |                          1011100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'accelerometer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1615.164 ; gain = 565.785
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               15 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	  93 Input   32 Bit        Muxes := 1     
+	  93 Input   16 Bit        Muxes := 6     
+	  93 Input    7 Bit        Muxes := 1     
+	  93 Input    1 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1615.164 ; gain = 565.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1615.164 ; gain = 565.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1615.164 ; gain = 565.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1634.020 ; gain = 584.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1634.020 ; gain = 584.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1634.020 ; gain = 584.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1634.020 ; gain = 584.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1634.020 ; gain = 584.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1634.020 ; gain = 584.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1634.020 ; gain = 584.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     1|
+|4     |LUT2   |    23|
+|5     |LUT3   |     9|
+|6     |LUT4   |    11|
+|7     |LUT5   |    17|
+|8     |LUT6   |    75|
+|9     |FDRE   |    48|
+|10    |IBUF   |     2|
+|11    |OBUF   |     5|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1634.020 ; gain = 584.641
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1634.020 ; gain = 583.324
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1634.020 ; gain = 584.641
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1638.977 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1642.680 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: da4bcb7f
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 36 Warnings, 26 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1642.680 ; gain = 1011.039
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1642.680 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.runs/synth_1/acctop_module.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file acctop_module_utilization_synth.rpt -pb acctop_module_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 18:23:32 2024...

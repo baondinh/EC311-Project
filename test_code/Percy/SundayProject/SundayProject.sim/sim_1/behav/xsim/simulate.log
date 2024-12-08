@@ -1,1 +1,8 @@
 Time resolution is 1 ps
+Time:                    0 | ACL Data: 000000100001000 | Tilt_Y: 01
+Time:                10000 | ACL Data: 000001000001000 | Tilt_Y: 10
+Time:                20000 | ACL Data: 000001010001000 | Tilt_Y: 10
+Time:                30000 | ACL Data: 000000110001000 | Tilt_Y: 01
+Time:                40000 | ACL Data: 000000000000000 | Tilt_Y: 00
+Time:                50000 | ACL Data: 000001100000000 | Tilt_Y: 11
+$finish called at time : 60 ns : File "X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.srcs/sim_1/new/tb_decoder.v" Line 44

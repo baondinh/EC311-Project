@@ -27,7 +27,7 @@ module vga_controller(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE, h_s
     input wire [0:5] letter_sel_ONE;
     input wire [0:5] letter_sel_TWO;
     input wire [0:5] letter_sel_THREE;
-    input wire [2:0] tilt_y;
+    input wire [1:0] tilt_y;
     output reg h_sync, v_sync, led_on, char;
     output reg [1:0]letter_index;
     

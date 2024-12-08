@@ -1,70 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="9872" HostCore="20" HostMemory="016853479424">
+    <Process Command="vivado.bat" Owner="percy27" Host="ECE-PHO115-23" Pid="18400" HostCore="20" HostMemory="016853479424">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="17192" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="6672" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="10744" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="11936" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="16896" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="18560" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="8656" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="12596" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="14984" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="4836" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="14220" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="17524" HostCore="20" HostMemory="016853479424">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="18424" HostCore="20" HostMemory="016853479424">
+    <Process Command="vivado.bat" Owner="percy27" Host="ECE-PHO115-23" Pid="30300" HostCore="20" HostMemory="016853479424">
     </Process>
 </ProcessHandle>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733694386" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_top.dcp">
-  <File Type="PA-TCL" Name="vga_top.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="vga_top_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="vga_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="vga_top.vds"/>
-  <File Type="RDS-UTIL" Name="vga_top_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="vga_top_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="vga_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="vga_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="vga_top_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733700164" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_top.dcp">
+  <File Type="PA-TCL" Name="acctop_module.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="acctop_module_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="acctop_module_reports.tcl"/>
+  <File Type="RDS-RDS" Name="acctop_module.vds"/>
+  <File Type="RDS-UTIL" Name="acctop_module_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="acctop_module_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="acctop_module.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="acctop_module_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="acctop_module_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/vga_top.v">
@@ -46,9 +46,51 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../Bao/accelerometer/seg7_control.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Bao/accelerometer/iclk_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Bao/accelerometer/accelerometer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Bao/accelerometer/accelerometer_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/acl_data_decoder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/acctop_module.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="vga_top"/>
+      <Option Name="TopModule" Val="acctop_module"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -78,9 +120,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='X:/ec311/SundayProject/SundayProject.runs/impl_1'
+HD_PWD='X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,7 +42,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log vga_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source vga_top.tcl -notrace
+/bin/touch .write_bitstream.begin.rst
+EAStep vivado -log acctop_module.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source acctop_module.tcl -notrace
 
 

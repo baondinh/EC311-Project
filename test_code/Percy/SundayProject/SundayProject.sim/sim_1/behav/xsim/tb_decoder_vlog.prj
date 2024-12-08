@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../SundayProject.srcs/sources_1/new/vga_top.v" \
+"../../../../SundayProject.srcs/sources_1/new/clk_divider.v" \
+"../../../../SundayProject.srcs/sources_1/new/letter_decoder.v" \
+"../../../../SundayProject.srcs/sources_1/new/vga_controller.v" \
+"../../../../SundayProject.srcs/sources_1/new/debouncer.v" \
+"../../../../../../Bao/accelerometer/seg7_control.v" \
+"../../../../../../Bao/accelerometer/iclk_gen.v" \
+"../../../../../../Bao/accelerometer/accelerometer.v" \
+"../../../../../../Bao/accelerometer/accelerometer_top.v" \
+"../../../../SundayProject.srcs/sources_1/new/acl_data_decoder.v" \
+"../../../../SundayProject.srcs/sources_1/new/acctop_module.v" \
+"../../../../SundayProject.srcs/sim_1/new/letter_decoder_tb.v" \
+"../../../../SundayProject.srcs/sim_1/new/acctb.v" \
+"../../../../SundayProject.srcs/sim_1/new/tb_decoder.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

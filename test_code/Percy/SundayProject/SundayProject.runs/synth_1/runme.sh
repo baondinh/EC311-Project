@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='X:/ec311/SundayProject/SundayProject.runs/synth_1'
+HD_PWD='X:/EC311-Project/test_code/Percy/SundayProject/SundayProject.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log vga_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_top.tcl
+EAStep vivado -log acctop_module.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source acctop_module.tcl
