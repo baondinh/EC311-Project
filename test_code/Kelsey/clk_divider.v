@@ -38,3 +38,4 @@ module clk_divider(clk, reset, newClk);
     
 
 endmodule
+

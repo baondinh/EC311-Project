@@ -21,12 +21,12 @@
 
 `timescale 1ns / 1ps
 
-module vga_controller_ONE(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE, h_sync, v_sync, led_on);
+module vga_controller(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE, h_sync, v_sync, led_on);
     
     input clk;
-    input wire [0:7] letter_sel_ONE;
-    input wire [0:7] letter_sel_TWO;
-    input wire [0:7] letter_sel_THREE;
+    input wire [0:5] letter_sel_ONE;
+    input wire [0:5] letter_sel_TWO;
+    input wire [0:5] letter_sel_THREE;
     
     output reg h_sync, v_sync, led_on;
     
@@ -42,42 +42,43 @@ module vga_controller_ONE(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE,
     
     wire enable = ((widthPos >=50 & widthPos < 690) & (heightPos >=33 & heightPos < 513)) ? 1'b1: 1'b0;
     
-    wire bmapenableONE = ((widthPos >= 20 & widthPos <= 219) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
-    wire bmapenableTWO = ((widthPos >= 220 & widthPos <= 419) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
-    wire bmapenableTHREE = ((widthPos >= 420 & widthPos <= 619) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
+    wire bmapenableONE = ((widthPos >= 120 & widthPos < 200) & ( heightPos >= 160 & heightPos < 320)) ? 1'b1: 1'b0;
+    wire bmapenableTWO = ((widthPos >= 320 & widthPos < 400) & ( heightPos >= 160 & heightPos < 320)) ? 1'b1: 1'b0;
+    wire bmapenableTHREE = ((widthPos >= 520 & widthPos < 600) & ( heightPos >= 160 & heightPos < 320)) ? 1'b1: 1'b0;
     
     // Help from Fadi on this code. Displaying two characters at once without two separate vga_controllers
-    wire [0:7] curr_letter_sel;
+    wire [0:5] curr_letter_sel;
     assign curr_letter_sel = bmapenableONE ? letter_sel_ONE : (bmapenableTWO ? letter_sel_TWO : letter_sel_THREE);
-
+    
     reg [2:0] x;
     reg [3:0] y; 
 
     reg [0:7] bmap [0:15];
     
-        initial
-        begin
-        bmap[0]   = 8'b00000000;
-        bmap[1]   = 8'b00000000;
-        bmap[2]   = 8'b00010000;
-        bmap[3]   = 8'b00111000;
-        bmap[4]   = 8'b01101100;
-        bmap[5]   = 8'b11000110;
-        bmap[6]   = 8'b11000110;
-        bmap[7]   = 8'b11111110;
-        bmap[8]   = 8'b11111110;
-        bmap[9]   = 8'b11000110;
-        bmap[10]  = 8'b11000110;
-        bmap[11]  = 8'b11000110;
-        bmap[12]  = 8'b00000000;
-        bmap[13]  = 8'b00000000;
-        bmap[14]  = 8'b00000000;
-        bmap[15]  = 8'b00000000;
-        end
+//        initial
+//        begin
+//        bmap[0]   = 8'b00000000;
+//        bmap[1]   = 8'b00000000;
+//        bmap[2]   = 8'b00000000;
+//        bmap[3]   = 8'b00000000;
+//        bmap[4]   = 8'b00000000;
+//        bmap[5]   = 8'b00000000;
+//        bmap[6]   = 8'b00000000;
+//        bmap[7]   = 8'b00000000;
+//        bmap[8]   = 8'b00000000;
+//        bmap[9]   = 8'b00000000;
+//        bmap[10]  = 8'b00000000;
+//        bmap[11]  = 8'b00000000;
+//        bmap[12]  = 8'b00000000;
+//        bmap[13]  = 8'b00000000;
+//        bmap[14]  = 8'b00000000;
+//        bmap[15]  = 8'b00000000;
+//        end
         
         always @(posedge clk)
         case (curr_letter_sel)
-        8'b01010001:
+//        "q":
+        6'b010000:
         begin
         	bmap[0] =  8'b00000000;	//
 			bmap[1] =  8'b00000000;	//
@@ -97,7 +98,8 @@ module vga_controller_ONE(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE,
 			bmap[15] = 8'b00000000;	//
         end
         
-        8'b01001001:
+//        "i":
+        6'b001000:
         begin
             bmap[0] = 8'b00000000;	//
 			bmap[1] = 8'b00000000;	//
@@ -116,6 +118,47 @@ module vga_controller_ONE(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE,
 			bmap[14] = 8'b00000000;	//
 			bmap[15] = 8'b00000000;	//
         end
+        
+//        "a":   
+        6'b000000:    
+        begin
+        bmap[0]   = 8'b00000000;
+        bmap[1]   = 8'b00000000;
+        bmap[2]   = 8'b00010000;
+        bmap[3]   = 8'b00111000;
+        bmap[4]   = 8'b01101100;
+        bmap[5]   = 8'b11000110;
+        bmap[6]   = 8'b11000110;
+        bmap[7]   = 8'b11111110;
+        bmap[8]   = 8'b11111110;
+        bmap[9]   = 8'b11000110;
+        bmap[10]  = 8'b11000110;
+        bmap[11]  = 8'b11000110;
+        bmap[12]  = 8'b00000000;
+        bmap[13]  = 8'b00000000;
+        bmap[14]  = 8'b00000000;
+        bmap[15]  = 8'b00000000;
+        end
+        
+//        default: 
+//        begin
+//        bmap[0]   = 8'b00000000;
+//        bmap[1]   = 8'b00000000;
+//        bmap[2]   = 8'b00000000;
+//        bmap[3]   = 8'b00000000;
+//        bmap[4]   = 8'b00000000;
+//        bmap[5]   = 8'b00000000;
+//        bmap[6]   = 8'b00000000;
+//        bmap[7]   = 8'b00000000;
+//        bmap[8]   = 8'b00000000;
+//        bmap[9]   = 8'b00000000;
+//        bmap[10]  = 8'b00000000;
+//        bmap[11]  = 8'b00000000;
+//        bmap[12]  = 8'b00000000;
+//        bmap[13]  = 8'b00000000;
+//        bmap[14]  = 8'b00000000;
+//        bmap[15]  = 8'b00000000;
+//        end
         endcase
    
     // Following always block ensures that 
@@ -172,15 +215,23 @@ module vga_controller_ONE(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE,
 //    wire bmapenableTWO = ((widthPos >= 220 & widthPos <= 419) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
 //    wire bmapenableTHREE = ((widthPos >= 420 & widthPos <= 619) & ( heightPos >= 160 & heightPos <= 320)) ? 1'b1: 1'b0;
     
+    // bmap enable one expansion
     always @(*) begin
         if (bmapenableONE) begin
-            x <= (widthPos - 20)/25;
+            x <= (widthPos - 120)/10;
             y <= (heightPos - 160)/10;
         end
-        else 
-            begin
-        x <= 0;
-        y <= 0;
+        else if (bmapenableTWO) begin
+            x <= (widthPos - 320)/10;
+            y <= (heightPos - 160)/10;
+        end
+        else if (bmapenableTHREE) begin
+            x <= (widthPos - 520)/10;
+            y <= (heightPos - 160)/10;
+        end
+        else begin
+            x <= 0;
+            y <= 0;
         end
     end
     
@@ -194,6 +245,11 @@ module vga_controller_ONE(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE,
             led_on <= bmap[y][x];
             end
         else if (enable & bmapenableTWO)
+            begin   
+            led_on <= bmap[y][x];
+            end
+            
+        else if (enable & bmapenableTHREE)
             begin   
             led_on <= bmap[y][x];
             end

@@ -20,8 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-`timescale 1ns / 1ps
-
+//module vga_top(clk, rst, en, del, switch_input, vga_r, vga_g, vga_b, h_sync, v_sync);
 module vga_top(clk, reset, in_r, in_g, in_b, vga_r, vga_g, vga_b, h_sync, v_sync);
 
     input clk, reset;
@@ -32,8 +31,19 @@ module vga_top(clk, reset, in_r, in_g, in_b, vga_r, vga_g, vga_b, h_sync, v_sync
     wire newClk, ledOn;
     
     clk_divider clkDiv (clk, reset, newClk);
+//    input clk, rst, en, del;
+//    input [5:0] switch_input;
     
-    vga_controller_ONE vga_conOne(newClk, 8'b01010001,8'b01001001, 8'b01010001, h_sync, v_sync, ledOn);
+//    output reg [3:0] vga_r, vga_g, vga_b;
+//    output h_sync, v_sync;
+//    wire newClk, ledOn;
+    
+//    clk_divider clkDiv (clk, rst, newClk);
+    
+//    letter_decoder ltrd(clk, rst, en, del, switch_input, letter1, letter2, letter3);
+    
+//    vga_controller vga_conOne(newClk, letter1, letter2, letter3, h_sync, v_sync, ledOn);
+    vga_controller vga_conOne(newClk, 6'b010000, 6'b010000, 6'b000000, h_sync, v_sync, ledOn);
         
     always@(posedge newClk)
     begin
@@ -43,11 +53,10 @@ module vga_top(clk, reset, in_r, in_g, in_b, vga_r, vga_g, vga_b, h_sync, v_sync
             vga_b <= in_b;
       end
       else begin
-            vga_r <= 4'b0;  
+            vga_r <= 4'b0;
             vga_g <= 4'b0;
             vga_b <= 4'b0;
       end
-      
-    end
-    
+    end  
 endmodule
+
