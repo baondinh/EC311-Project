@@ -188,9 +188,9 @@ module letter_decoder (
         letter_buffer = 0 ; // new inputed letter
         current_position = 2'b00; // Keeps track of letter slot index
         last_inserted_position = 2'b00; // Initialize last inserted position to letter1
-        letter1 = 0;
-        letter2 = 0;
-        letter3 = 0;
+        letter1 = 6'b111111;
+        letter2 = 6'b111111;
+        letter3 = 6'b111111;
     end
     
 // Letter decoder
@@ -229,9 +229,9 @@ module letter_decoder (
     // Sequential Logic for Buffer Management
     always @(posedge clk) begin
         if (rst) begin
-            letter1 <= " ";
-            letter2 <= " ";
-            letter3 <= " ";
+            letter1 <= 6'b111111;
+            letter2 <= 6'b111111;
+            letter3 <= 6'b111111;
             current_position <= 2'b00;
             last_inserted_position <= 2'b00; // Reset the last inserted position
         end
@@ -268,12 +268,12 @@ module letter_decoder (
                 end
                 2'b01: begin
                     letter2 <= 6'b111111; // Clear the second letter
-                    current_position <= 2'b00; // Move position back to letter1
+                    current_position <= 2'b01; // Move position back to letter1
                     last_inserted_position <= 2'b00;
                 end
                 2'b10: begin
                     letter3 <= 6'b111111; // Clear the third letter
-                    current_position <= 2'b01; // Move position back to letter2
+                    current_position <= 2'b10; // Move position back to letter2
                     last_inserted_position <= 2'b01;
                 end
             endcase

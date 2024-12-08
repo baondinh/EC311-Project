@@ -77,6 +77,7 @@ read_verilog -library xil_defaultlib {
   X:/ec311/SundayProject/SundayProject.srcs/sources_1/new/clk_divider.v
   X:/ec311/SundayProject/SundayProject.srcs/sources_1/new/letter_decoder.v
   X:/ec311/SundayProject/SundayProject.srcs/sources_1/new/vga_controller.v
+  X:/ec311/SundayProject/SundayProject.srcs/sources_1/new/debouncer.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

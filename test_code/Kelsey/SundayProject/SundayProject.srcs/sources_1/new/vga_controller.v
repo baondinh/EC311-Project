@@ -595,7 +595,7 @@ module vga_controller(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE, h_s
 			bmap[15] = 8'b00000000;	//    
         end
 
-         6'b111111:    
+         6'b111111:     // delete (no letter)
          begin
                 bmap[0]   = 8'b00000000;
                 bmap[1]   = 8'b00000000;
