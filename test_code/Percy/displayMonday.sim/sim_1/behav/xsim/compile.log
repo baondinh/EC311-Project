@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/test_code/Kelsey/clk_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/test_code/Kelsey/vga_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_controller_ONE
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/test_code/Kelsey/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/test_code/Kelsey/displayMonday.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
