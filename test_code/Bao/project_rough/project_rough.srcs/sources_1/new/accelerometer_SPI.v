@@ -48,7 +48,8 @@ module accelerometer_SPI(
 	output sclk,				// 1MHz
     output reg mosi = 1'b0,     // master out
     output reg cs = 1'b1,       // slave chip select
-    output [14:0] acl_data     // 15 bit data, 5 each axis
+//    output [14:0] acl_data     // 15 bit data, 5 each axis
+    output [1:0] acl_data //5 bits of data for x axis
     );
     
     // Control sclk output for spi mode
@@ -72,7 +73,8 @@ module accelerometer_SPI(
 	reg [7:0] mode_wr_data  = 8'h02;			// Data to write to mode register
     reg [7:0] read_instr    = 8'h0B;			// Sensor read instruction
     reg [7:0] x_LSB_addr    = 8'h0E;			// X data LSB address, auto-increments to following 5 data registers
-    reg [14:0] temp_DATA    = 15'b0;			// 15 bits, 5 bits for each axis		
+//    reg [14:0] temp_DATA    = 15'b0;			// 15 bits, 5 bits for each axis		
+    reg [1:0] temp_DATA    = 2'b0;			   // 2 bits for threshold inputs
     reg [15:0] X = 15'b0;						// X data MSB and LSB from sensor
     reg [15:0] Y = 15'b0;					    // Y data MSB and LSB from sensor
     reg [15:0] Z = 15'b0;						// Z data MSB and LSB from sensor
@@ -730,11 +732,25 @@ module accelerometer_SPI(
     end
     
     
-    // Portion that needs to be edited to work with position controls in Multi-Input decoder
+    // Data output edited to work with position controls in Multi-Input decoder
     // Data Buffer
     always @(negedge iclk)
         if(latch_data) begin		// latch 1&1/2 tick after entering state END_SPI
-            temp_DATA <= { X[11:7], Y[11:7], Z[11:7] };   // latch sign bit + 4 data bits each axis
+//            temp_DATA <= { X[11:7], Y[11:7], Z[11:7] };   // latch sign bit + 4 data bits each axis
+
+//            { Y[11:7] } extract y axis data (more intuitive as x axis)
+            // When viewing the Nexys A7 board in its default orientation, accelerometer axes are rotated 90 degrees counterclockwise
+            // Threshold logic 
+            // Negative data appears to be in 1's complement with MSB being '1' for a negative value and '0' for positive value
+            if (Y[11] == 1'b0 & Y[10:7] >= 2'b11) begin         // Positive x axis signal and threshold of 3
+                temp_DATA <= 2'b01; 
+            end 
+            else if (Y[11] == 1'b1 & ~Y[10:7] >= 2'b11) begin    // Negative x axis signal and threshold of -3
+                temp_DATA <= 2'b10; 
+            end 
+            else begin // Neutral state to account for poor accelerometer calibration and sensitivity to movement
+                temp_DATA <= 2'b00;
+            end
 		end
     
     // Output accelerometer data

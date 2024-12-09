@@ -32,7 +32,7 @@ module vga_top(clk, ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN, reset, en, del, switc
     
     // TEMPORARY LED OUTPUT TO SHOW ACCELEROMETER (CHANGE TOP PARAMETERS LATER)
     // WILL ALSO NEED TO CHANGE CONSTRAINT LEDS
-    output [14:0] LED;
+    output [1:0] LED;
     
     // VGA output
     output reg [3:0] vga_r, vga_g, vga_b;
@@ -42,7 +42,7 @@ module vga_top(clk, ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN, reset, en, del, switc
     wire [5:0] letter1; 
     wire [5:0] letter2;
     wire [5:0] letter3;
-    wire [14:0] acl_data; // ***** NEED TO CHANGE WITHIN ACCELEROMETER_SPI FOR ONLY X DATA*****
+    wire [1:0] acl_data; // ***** NEED TO CHANGE WITHIN ACCELEROMETER_SPI FOR ONLY X DATA*****
 
     // CLK DIVIDER FROM 100MHz -> 25 MHz
     clk_divider clkDiv (clk, reset, newClk);
@@ -84,7 +84,5 @@ module vga_top(clk, ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN, reset, en, del, switc
         vga_b <= (ledOn) ? (char ? 0: 255) : 0;
     end    
     
-    assign LED[14:10] = acl_data[14:10];    // 5 bits of x data
-    assign LED[9:5]   = acl_data[9:5];     // 5 bits of y data
-    assign LED[4:0]   = acl_data[4:0];      // 5 bits of z data
+    assign LED[1:0] = acl_data[1:0];
 endmodule
