@@ -8,11 +8,12 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sun Dec  8 14:19:07 2024
+  **** Start of session at: Sun Dec  8 20:33:25 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source vga_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 630.172 ; gain = 200.801
 Command: read_checkpoint -auto_incremental -incremental {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/utils_1/imports/synth_1/vga_top.dcp}
 INFO: [Vivado 12-5825] Read reference checkpoint from X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/utils_1/imports/synth_1/vga_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -26,31 +27,41 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17892
+INFO: [Synth 8-7075] Helper process launched with PID 15140
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1499.035 ; gain = 448.508
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1498.395 ; gain = 448.410
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'vga_top' [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_top.v:23]
 INFO: [Synth 8-6157] synthesizing module 'clk_divider' [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/clk_divider.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (0#1) [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/clk_divider.v:6]
+INFO: [Synth 8-6157] synthesizing module 'accelerometer_SPI' [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/accelerometer_SPI.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/accelerometer_SPI.v:198]
+INFO: [Synth 8-6155] done synthesizing module 'accelerometer_SPI' (0#1) [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/accelerometer_SPI.v:45]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/debouncer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (0#1) [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/debouncer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'letter_decoder' [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/letter_decoder.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/letter_decoder.v:143]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/letter_decoder.v:164]
+INFO: [Synth 8-6155] done synthesizing module 'letter_decoder' (0#1) [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/letter_decoder.v:22]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_controller.v:24]
-INFO: [Synth 8-155] case statement is not full and has no default [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_controller.v:68]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_controller.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_controller.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'vga_top' (0#1) [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_top.v:23]
-WARNING: [Synth 8-6014] Unused sequential element vga_g_reg was removed.  [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_top.v:62]
+WARNING: [Synth 8-6014] Unused sequential element next_counter_reg was removed.  [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/debouncer.v:28]
+WARNING: [Synth 8-6014] Unused sequential element vga_g_reg was removed.  [X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_top.v:83]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1610.914 ; gain = 560.387
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1620.773 ; gain = 570.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1610.914 ; gain = 560.387
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1620.773 ; gain = 570.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1610.914 ; gain = 560.387
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1620.773 ; gain = 570.789
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1610.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1620.773 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -61,54 +72,166 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/vga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1702.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.777 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1702.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1707.777 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'accelerometer_SPI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                POWER_UP |                          0000000 |                          0000000
+              BEGIN_SPIW |                          0000001 |                          0000001
+              SEND_WCMD7 |                          0000010 |                          0000010
+              SEND_WCMD6 |                          0000011 |                          0000011
+              SEND_WCMD5 |                          0000100 |                          0000100
+              SEND_WCMD4 |                          0000101 |                          0000101
+              SEND_WCMD3 |                          0000110 |                          0000110
+              SEND_WCMD2 |                          0000111 |                          0000111
+              SEND_WCMD1 |                          0001000 |                          0001000
+              SEND_WCMD0 |                          0001001 |                          0001001
+             SEND_WADDR7 |                          0001010 |                          0001010
+             SEND_WADDR6 |                          0001011 |                          0001011
+             SEND_WADDR5 |                          0001100 |                          0001100
+             SEND_WADDR4 |                          0001101 |                          0001101
+             SEND_WADDR3 |                          0001110 |                          0001110
+             SEND_WADDR2 |                          0001111 |                          0001111
+             SEND_WADDR1 |                          0010000 |                          0010000
+             SEND_WADDR0 |                          0010001 |                          0010001
+              SEND_BYTE7 |                          0010010 |                          0010010
+              SEND_BYTE6 |                          0010011 |                          0010011
+              SEND_BYTE5 |                          0010100 |                          0010100
+              SEND_BYTE4 |                          0010101 |                          0010101
+              SEND_BYTE3 |                          0010110 |                          0010110
+              SEND_BYTE2 |                          0010111 |                          0010111
+              SEND_BYTE1 |                          0011000 |                          0011000
+              SEND_BYTE0 |                          0011001 |                          0011001
+                    WAIT |                          0011010 |                          0011010
+              BEGIN_SPIR |                          0011011 |                          0011011
+              SEND_RCMD7 |                          0011100 |                          0011100
+              SEND_RCMD6 |                          0011101 |                          0011101
+              SEND_RCMD5 |                          0011110 |                          0011110
+              SEND_RCMD4 |                          0011111 |                          0011111
+              SEND_RCMD3 |                          0100000 |                          0100000
+              SEND_RCMD2 |                          0100001 |                          0100001
+              SEND_RCMD1 |                          0100010 |                          0100010
+              SEND_RCMD0 |                          0100011 |                          0100011
+             SEND_RADDR7 |                          0100100 |                          0100100
+             SEND_RADDR6 |                          0100101 |                          0100101
+             SEND_RADDR5 |                          0100110 |                          0100110
+             SEND_RADDR4 |                          0100111 |                          0100111
+             SEND_RADDR3 |                          0101000 |                          0101000
+             SEND_RADDR2 |                          0101001 |                          0101001
+             SEND_RADDR1 |                          0101010 |                          0101010
+             SEND_RADDR0 |                          0101011 |                          0101011
+               REC_XLSB7 |                          0101100 |                          0101100
+               REC_XLSB6 |                          0101101 |                          0101101
+               REC_XLSB5 |                          0101110 |                          0101110
+               REC_XLSB4 |                          0101111 |                          0101111
+               REC_XLSB3 |                          0110000 |                          0110000
+               REC_XLSB2 |                          0110001 |                          0110001
+               REC_XLSB1 |                          0110010 |                          0110010
+               REC_XLSB0 |                          0110011 |                          0110011
+               REC_XMSB7 |                          0110100 |                          0110100
+               REC_XMSB6 |                          0110101 |                          0110101
+               REC_XMSB5 |                          0110110 |                          0110110
+               REC_XMSB4 |                          0110111 |                          0110111
+               REC_XMSB3 |                          0111000 |                          0111000
+               REC_XMSB2 |                          0111001 |                          0111001
+               REC_XMSB1 |                          0111010 |                          0111010
+               REC_XMSB0 |                          0111011 |                          0111011
+               REC_YLSB7 |                          0111100 |                          0111100
+               REC_YLSB6 |                          0111101 |                          0111101
+               REC_YLSB5 |                          0111110 |                          0111110
+               REC_YLSB4 |                          0111111 |                          0111111
+               REC_YLSB3 |                          1000000 |                          1000000
+               REC_YLSB2 |                          1000001 |                          1000001
+               REC_YLSB1 |                          1000010 |                          1000010
+               REC_YLSB0 |                          1000011 |                          1000011
+               REC_YMSB7 |                          1000100 |                          1000100
+               REC_YMSB6 |                          1000101 |                          1000101
+               REC_YMSB5 |                          1000110 |                          1000110
+               REC_YMSB4 |                          1000111 |                          1000111
+               REC_YMSB3 |                          1001000 |                          1001000
+               REC_YMSB2 |                          1001001 |                          1001001
+               REC_YMSB1 |                          1001010 |                          1001010
+               REC_YMSB0 |                          1001011 |                          1001011
+               REC_ZLSB7 |                          1001100 |                          1001100
+               REC_ZLSB6 |                          1001101 |                          1001101
+               REC_ZLSB5 |                          1001110 |                          1001110
+               REC_ZLSB4 |                          1001111 |                          1001111
+               REC_ZLSB3 |                          1010000 |                          1010000
+               REC_ZLSB2 |                          1010001 |                          1010001
+               REC_ZLSB1 |                          1010010 |                          1010010
+               REC_ZLSB0 |                          1010011 |                          1010011
+               REC_ZMSB7 |                          1010100 |                          1010100
+               REC_ZMSB6 |                          1010101 |                          1010101
+               REC_ZMSB5 |                          1010110 |                          1010110
+               REC_ZMSB4 |                          1010111 |                          1010111
+               REC_ZMSB3 |                          1011000 |                          1011000
+               REC_ZMSB2 |                          1011001 |                          1011001
+               REC_ZMSB1 |                          1011010 |                          1011010
+               REC_ZMSB0 |                          1011011 |                          1011011
+                 END_SPI |                          1011100 |                          1011100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'accelerometer_SPI'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
 	   2 Input   10 Bit       Adders := 2     
 	   2 Input    7 Bit       Adders := 3     
-	   2 Input    1 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 2     
 +---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               15 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 10    
+	                8 Bit    Registers := 7     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 3     
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 16    
 +---Muxes : 
-	   2 Input    8 Bit        Muxes := 9     
-	   4 Input    8 Bit        Muxes := 9     
-	   2 Input    6 Bit        Muxes := 2     
+	  93 Input   32 Bit        Muxes := 1     
+	  93 Input   16 Bit        Muxes := 6     
+	  28 Input    8 Bit        Muxes := 1     
+	  93 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 9     
+	   4 Input    6 Bit        Muxes := 6     
 	   2 Input    4 Bit        Muxes := 4     
 	   2 Input    3 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 4     
-	   4 Input    1 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 15    
+	  93 Input    1 Bit        Muxes := 7     
+	   4 Input    1 Bit        Muxes := 10    
+	  28 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -126,25 +249,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -162,37 +285,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -208,40 +331,43 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |    74|
-|3     |LUT1   |     7|
-|4     |LUT2   |    67|
-|5     |LUT3   |   128|
-|6     |LUT4   |    82|
-|7     |LUT5   |   122|
-|8     |LUT6   |    94|
-|9     |FDRE   |    30|
-|10    |IBUF   |     2|
-|11    |OBUF   |    14|
+|1     |BUFG   |     2|
+|2     |CARRY4 |    94|
+|3     |LUT1   |     8|
+|4     |LUT2   |    86|
+|5     |LUT3   |   125|
+|6     |LUT4   |   145|
+|7     |LUT5   |   194|
+|8     |LUT6   |   215|
+|9     |MUXF7  |     5|
+|10    |FDRE   |   209|
+|11    |FDSE   |    18|
+|12    |IBUF   |    11|
+|13    |OBUF   |    32|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1707.777 ; gain = 657.793
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 1702.426 ; gain = 560.387
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1702.426 ; gain = 651.898
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:42 . Memory (MB): peak = 1707.777 ; gain = 570.789
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1707.777 ; gain = 657.793
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1702.426 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 74 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1707.777 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 99 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1702.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.777 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: a91da15d
+Synth Design complete | Checksum: 86f695f8
 INFO: [Common 17-83] Releasing license: Synthesis
-29 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+40 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1702.426 ; gain = 1068.145
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1702.426 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:50 . Memory (MB): peak = 1707.777 ; gain = 1072.977
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1707.777 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.runs/synth_1/vga_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 1707.777 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_utilization -file vga_top_utilization_synth.rpt -pb vga_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 14:19:45 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 20:35:06 2024...

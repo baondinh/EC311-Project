@@ -20,37 +20,71 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module vga_top(clk, reset, vga_r, vga_g, vga_b, h_sync, v_sync);
-//module vga_top(clk, reset, en, del, switch_input, vga_r, vga_g, vga_b, h_sync, v_sync);
-
-    input clk, reset;
+module vga_top(clk, ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN, reset, en, del, switch_input, vga_r, vga_g, vga_b, h_sync, v_sync, LED);
+   
+    // FPGA button and switch inputs
+    input clk, reset, en, del;
+    input [5:0] switch_input;
     
-//    input clk, reset, en, del;
-//    input [5:0] switch_input;
+    // Accelerometer SPI inputs and outputs
+    input ACL_MISO; 
+    output ACL_MOSI, ACL_SCLK, ACL_CSN;
     
+    // TEMPORARY LED OUTPUT TO SHOW ACCELEROMETER (CHANGE TOP PARAMETERS LATER)
+    // WILL ALSO NEED TO CHANGE CONSTRAINT LEDS
+    output [14:0] LED;
+    
+    // VGA output
     output reg [3:0] vga_r, vga_g, vga_b;
     output h_sync, v_sync;
-    wire newClk, ledOn, char;
+    
+    wire newClk, ledOn, char, clean_en, clean_del;
+    wire [5:0] letter1; 
+    wire [5:0] letter2;
+    wire [5:0] letter3;
+    wire [14:0] acl_data; // ***** NEED TO CHANGE WITHIN ACCELEROMETER_SPI FOR ONLY X DATA*****
 
     // CLK DIVIDER FROM 100MHz -> 25 MHz
     clk_divider clkDiv (clk, reset, newClk);
     
-//    letter_decoder ltrd(
-//        .clk(clk), 
-//        .rst(reset), 
-//        .en(en), 
-//        .del(del), 
-//        .switch_input(switch_input), 
-//        .letter1(letter1), 
-//        .letter2(letter2), 
-//        .letter3(letter3)
-//    );
+    // Accelerometer (example uses 4MHz clock but will try to use with 
+    // the 25 MHz clock to reduce number of modules needed
+    accelerometer_SPI acl(
+        .iclk(newClk), 
+        .miso(ACL_MISO), 
+        .sclk(ACL_SCLK), 
+        .mosi(ACL_MOSI), 
+        .cs(ACL_CSN), 
+        .acl_data(acl_data) 
+    ); 
     
-    vga_controller vga_con(newClk, 6'b010000, 6'b010000, 6'b000000, h_sync, v_sync, ledOn, char);
+    // Debounced signals for each button 
+    debouncer debEN(clk, en, clean_en);
+    debouncer debDEL(clk, del, clean_del);
+    
+    // Letter decoder
+    letter_decoder ltrd(
+        .clk(clk), 
+        .rst(reset), 
+        .en(clean_en), 
+        .del(clean_del), 
+        .switch_input(switch_input), 
+        .letter1(letter1), 
+        .letter2(letter2), 
+        .letter3(letter3)
+    );
+    
+    vga_controller vga_con(newClk, letter1, letter2, letter3, h_sync, v_sync, ledOn, char);
+
+//    vga_controller vga_con(newClk, 6'b010000, 6'b010000, 6'b000000, h_sync, v_sync, ledOn, char);
         
     always@(posedge newClk) begin
         vga_r <= (ledOn) ? (char ? 255: 0) : 0; 
         vga_g <= (ledOn) ? (char ? 255: 0) : 0;
         vga_b <= (ledOn) ? (char ? 0: 255) : 0;
     end    
+    
+    assign LED[14:10] = acl_data[14:10];    // 5 bits of x data
+    assign LED[9:5]   = acl_data[9:5];     // 5 bits of y data
+    assign LED[4:0]   = acl_data[4:0];      // 5 bits of z data
 endmodule

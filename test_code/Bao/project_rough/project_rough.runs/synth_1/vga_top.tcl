@@ -73,7 +73,10 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/accelerometer_SPI.v}
   {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/clk_divider.v}
+  {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/debouncer.v}
+  {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/letter_decoder.v}
   {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_controller.v}
   {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/project_rough/project_rough.srcs/sources_1/new/vga_top.v}
 }
