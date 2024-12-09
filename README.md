@@ -1,5 +1,58 @@
 # EC311-Project 
+# Tilt Encoder
 ### Yuxuan Chen, Phyliss Darko, Bao Dinh, Kelsey Sweeney
+
+## Link to Project Demo Video
+
+
+
+## Overview of the Project
+
+
+
+## How to run your project
+
+
+
+## Overview of the code structure (what code does what and any important notes)
+vga_top
+
+clk_divide
+
+
+accelerometer_SPI
+* comment on directionality of FPGA tilts
+
+
+debouncer
+
+
+letter_decoder
+
+
+
+vga_controller
+
+
+
+
+## Sources and Citations
+FPGADude - Accelerometer SPI Master and Top module
+https://www.youtube.com/watch?v=7b3YwQWwvXM
+https://github.com/FPGADude/Digital-Design/tree/main/FPGA%20Projects/Nexys%20A7%203-Axis%20Accelerometer%20SPI
+
+FPGADude - ASCII ROM
+ASCII ROM code provided 
+
+
+Project F
+Modeled code that magnified smaller bitmap off of "Racing the Beam" project
+https://projectf.io/posts/racing-the-beam/
+
+
+## Anything else you feel is relevant
+
+
 
 ## Multi-Input Translator: 
 Using a combination of tilt and switch inputs that are translated to text and displayed on monitor. 
