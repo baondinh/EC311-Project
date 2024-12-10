@@ -34,6 +34,7 @@ This project involves using switch inputs to write letters onto a screen and til
 
 ## Sources and Citations
 FPGADude - Accelerometer SPI Master and Top module
+
 [Accelerometer YouTube Video](https://www.youtube.com/watch?v=7b3YwQWwvXM)
 
 [Accelerometer GitHub](https://github.com/FPGADude/Digital-Design/tree/main/FPGA%20Projects/Nexys%20A7%203-Axis%20Accelerometer%20SPI)
@@ -49,7 +50,7 @@ Modeled code that magnified smaller bitmap off of "Racing the Beam" project
 
 
 
-### Feature 
+## Feature 
 ### Overall System Workflow management: 
 Clock Generation: The clk_divider provides a 25 MHz clock for timing-sensitive modules. 
 Input Handling: Button presses (en and del) are debounced. Accelerometer SPI processes input data. Switch and tilt inputs are decoded into letters.
