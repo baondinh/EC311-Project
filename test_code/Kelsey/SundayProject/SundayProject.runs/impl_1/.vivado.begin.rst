@@ -68,3 +68,8 @@
     <Process Command="vivado.bat" Owner="sweeneyk" Host="ECE-PHO115-21" Pid="18424" HostCore="20" HostMemory="016853479424">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="baondinh" Host="ECE-PHO115-22" Pid="7380" HostCore="20" HostMemory="016853479424">
+    </Process>
+</ProcessHandle>

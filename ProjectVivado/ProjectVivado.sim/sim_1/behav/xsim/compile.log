@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sources_1/new/letter_decoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module letter_decoder
-INFO: [VRFC 10-2263] Analyzing Verilog file "X:/EC311-Project/ProjectVivado/ProjectVivado.srcs/sim_1/new/letter_decoder_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module letter_decoder_tb

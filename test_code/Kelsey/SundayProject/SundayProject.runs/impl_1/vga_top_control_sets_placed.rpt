@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sun Dec  8 16:47:42 2024
-| Host         : ECE-PHO115-21 running 64-bit major release  (build 9200)
+| Date         : Sun Dec  8 19:32:10 2024
+| Host         : ECE-PHO115-22 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_top_control_sets_placed.rpt
 | Design       : vga_top
 | Device       : xc7a100t
@@ -75,9 +75,9 @@ Table of Contents
 +----------------+-----------------------------+------------------------------+------------------+----------------+--------------+
 |  newClk_BUFG   |                             |                              |                4 |              4 |         1.00 |
 |  newClk_BUFG   | vga_con/widthPos[9]_i_1_n_0 |                              |                3 |              4 |         1.33 |
-|  clk_IBUF_BUFG | ltrD/letter3[5]_i_2_n_0     | ltrD/letter3[5]_i_1_n_0      |                4 |              6 |         1.50 |
 |  clk_IBUF_BUFG | ltrD/letter2[5]_i_2_n_0     | ltrD/letter2[5]_i_1_n_0      |                3 |              6 |         2.00 |
 |  clk_IBUF_BUFG | ltrD/letter1[5]_i_2_n_0     | ltrD/letter1[5]_i_1_n_0      |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | ltrD/letter3[5]_i_2_n_0     | ltrD/letter3[5]_i_1_n_0      |                4 |              6 |         1.50 |
 |  newClk_BUFG   | vga_con/widthPos[9]_i_1_n_0 | vga_con/heightPos            |                4 |              6 |         1.50 |
 |  clk_IBUF_BUFG |                             |                              |                6 |             10 |         1.67 |
 |  newClk_BUFG   |                             | vga_con/widthPos[9]_i_1_n_0  |                6 |             10 |         1.67 |

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "X:/ec311/SundayProject/SundayProject.runs/synth_1/vga_top.tcl"
+  variable script "X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.runs/synth_1/vga_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,28 +56,26 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 5
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir X:/ec311/SundayProject/SundayProject.cache/wt [current_project]
-set_property parent.project_path X:/ec311/SundayProject/SundayProject.xpr [current_project]
+set_property webtalk.parent_dir {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.cache/wt} [current_project]
+set_property parent.project_path {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo x:/ec311/SundayProject/SundayProject.cache/ip [current_project]
+set_property ip_output_repo {x:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  X:/ec311/SundayProject/SundayProject.srcs/sources_1/new/vga_top.v
-  X:/ec311/SundayProject/SundayProject.srcs/sources_1/new/clk_divider.v
-  X:/ec311/SundayProject/SundayProject.srcs/sources_1/new/letter_decoder.v
-  X:/ec311/SundayProject/SundayProject.srcs/sources_1/new/vga_controller.v
-  X:/ec311/SundayProject/SundayProject.srcs/sources_1/new/debouncer.v
+  {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.srcs/sources_1/new/vga_top.v}
+  {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.srcs/sources_1/new/clk_divider.v}
+  {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.srcs/sources_1/new/letter_decoder.v}
+  {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.srcs/sources_1/new/vga_controller.v}
+  {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.srcs/sources_1/new/debouncer.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -88,12 +86,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc X:/ec311/SundayProject/Nexys4DDR_Master.xdc
-set_property used_in_implementation false [get_files X:/ec311/SundayProject/Nexys4DDR_Master.xdc]
+read_xdc {{X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/Nexys4DDR_Master.xdc}}
+set_property used_in_implementation false [get_files {{X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/Nexys4DDR_Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental X:/ec311/SundayProject/SundayProject.srcs/utils_1/imports/synth_1/vga_top.dcp
+read_checkpoint -auto_incremental -incremental {X:/My Documents/EC311_IntroLogicDesign/EC311 Lab/Project/test_code/Kelsey/SundayProject/SundayProject.srcs/utils_1/imports/synth_1/vga_top.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
