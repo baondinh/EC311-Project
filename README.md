@@ -21,7 +21,7 @@ This project involves using switch inputs to write letters onto a screen and til
 8. To reset screen, press M18.
 
 
-## Overview of the code structure (what code does what and any important notes)
+## Overview of the code structure
 | Module Name        | Description                                                                 | Important Notes                                                        |
 | ------------------ | --------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | `vga_top`          | The top-level module that integrates all components.                        | Handles VGA output, SPI interface, and tilt detection logic.          |
