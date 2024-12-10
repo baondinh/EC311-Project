@@ -33,20 +33,16 @@ This project involves using switch inputs to write letters onto a screen and til
 
 
 ## Sources and Citations
-FPGADude - Accelerometer SPI Master and Top module
+#### FPGADude - Accelerometer SPI Master and Top module
+* [YouTube Demo](https://www.youtube.com/watch?v=7b3YwQWwvXM)
+* [FPGADude GitHub Accelerometer](https://github.com/FPGADude/Digital-Design/tree/main/FPGA%20Projects/Nexys%20A7%203-Axis%20Accelerometer%20SPI)
 
-[Accelerometer YouTube Video](https://www.youtube.com/watch?v=7b3YwQWwvXM)
+#### FPGADude - ASCII ROM
 
-[Accelerometer GitHub](https://github.com/FPGADude/Digital-Design/tree/main/FPGA%20Projects/Nexys%20A7%203-Axis%20Accelerometer%20SPI)
-
-FPGADude - ASCII ROM
-ASCII ROM code provided 
+#### [Project F](https://projectf.io/posts/racing-the-beam/)
+* Modeled code that magnified smaller bitmap off of "Racing the Beam" project
 
 
-Project F
-Modeled code that magnified smaller bitmap off of "Racing the Beam" project
-
-[Project F](https://projectf.io/posts/racing-the-beam/)
 
 
 
@@ -57,7 +53,7 @@ Input Handling: Button presses (en and del) are debounced. Accelerometer SPI pro
 Letter Display: The letter_decoder updates the three-letter storage (letter1, letter2, letter3) based on user input. 
 Visual Output: The vga_controller uses the updated letters to render them on the display, with specific color configurations for letters and background.
 
-### Accelerometer iInput 
+### Accelerometer Input 
 The tilt detection logic determines the direction and magnitude of tilt based on accelerometer data. The tilt information is used to update the position of the letters dynamically on the VGA screen.
 #### Key Component: 
 
@@ -74,7 +70,7 @@ Reset logic: Reset Logic Clear State: Asserting the rst signal resets all letter
 ### VGA Display 
 The VGA takes in three 6’bit encoding inputs and outputs information for the VGA display including; h_sync, v_sync and logic for when a pixel should be on or off.
 
-### Key Component:
+#### Key Component:
 Enable logic: There are three sections of the screen; one for each of the letters that can be displayed. A for loop iterates over each pixel coordinate. When the current pixel coordinate is located within one of three Bitmap enable regions, the specific character that should be displayed there is stored in curr_letter_sel and the pixel is reported as on or off. 
 Expanding Letter Logic:
 Alphabet Bitmap: Depending on which letter is passed to the vga_controller, the 6 bit representation of that letter is matched with one of twenty-six case statements and reported to curr_letter_sel. 
@@ -110,13 +106,5 @@ Alphabet Bitmap: Depending on which letter is passed to the vga_controller, the 
 | 6'b011001   | z      | 122         |
 | Default     |  (Space)| 32          |
 
-## Main Components: 
-- Nexys A7 FPGA
-  - https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual?srsltid=AfmBOooTf9fmbBJXkkVbX3Q9yLxFQurI2v2I_xBizHjNdD6rqfFJyH4J 
-- Accelerometer (ADXL362)
-  - https://www.analog.com/en/products/adxl362.html#part-details
- 
-
-Google Doc: https://docs.google.com/document/d/1mrcgrb-qavMLpFS8MXbVEAYGh_ys5Jjrv_TpArgGm4I/edit?usp=sharing
 
 
