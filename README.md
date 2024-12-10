@@ -58,14 +58,14 @@ Letter Display: The letter_decoder updates the three-letter storage (letter1, le
 Visual Output: The vga_controller uses the updated letters to render them on the display, with specific color configurations for letters and background.
 
 ### Accelerometer input (Phyliss, Bao)
-	Function: The tilt detection logic determines the direction and magnitude of tilt based on accelerometer data. The tilt information is used to update the position of the letters dynamically on the VGA screen.
+The tilt detection logic determines the direction and magnitude of tilt based on accelerometer data. The tilt information is used to update the position of the letters dynamically on the VGA screen.
 #### Key Component: 
 
 
 
 
 ### Letter Typing System (Yuxuan)
-	Function: Using the onboard switches, users can type characters and send them to the VGA screen. The switches select letters, while debounce buttons confirm the selection or delete the last input. Characters are displayed at the tilt-determined position.
+Using the onboard switches, users can type characters and send them to the VGA screen. The switches select letters, while debounce buttons confirm the selection or delete the last input. Characters are displayed at the tilt-determined position.
 #### Key Component: 
 Letter Management Logic: The system maintains three letter slots (letter1, letter2, letter3), each capable of holding a single letter.The switch_input is mapped to letters using a case statement. Each 6-bit combination corresponds to a specific letter (or blank space by default). The selected letter is temporarily stored in letter_buffer.
 Enable and delete signal:  The en signal triggers the addition of a new letter to the next available slot. When a letter is added, the current_position shifts to the next slot, cycling between the three available positions. A flag (flagEN) ensures only one letter is added per press. The del signal removes the letter in the slot pointed to by last_inserted_position. The last_inserted_position register keeps track of the most recently modified slot.
@@ -74,7 +74,7 @@ Reset logic: Reset Logic Clear State: Asserting the rst signal resets all letter
 	
 
 ### VGA Display (Kelsey)
- Function: The VGA takes in three 6’bit encoding inputs and outputs information for the VGA display including; h_sync, v_sync and logic for when a pixel should be on or off.
+The VGA takes in three 6’bit encoding inputs and outputs information for the VGA display including; h_sync, v_sync and logic for when a pixel should be on or off.
 
 ####Key Components:
 Enable logic: There are three sections of the screen; one for each of the letters that can be displayed. A for loop iterates over each pixel coordinate. When the current pixel coordinate is located within one of three Bitmap enable regions, the specific character that should be displayed there is stored in curr_letter_sel and the pixel is reported as on or off. 
