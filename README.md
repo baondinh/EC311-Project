@@ -84,6 +84,37 @@ Expanding Letter Logic:
 Alphabet Bitmap: Depending on which letter is passed to the vga_controller, the 6 bit representation of that letter is matched with one of twenty-six case statements and reported to curr_letter_sel. 
 
 
+## letter index:
+| 6-bit Input | Letter | ASCII Value |
+| ----------- | ------ | ----------- |
+| 6'b000000   | a      | 97          |
+| 6'b000001   | b      | 98          |
+| 6'b000010   | c      | 99          |
+| 6'b000011   | d      | 100         |
+| 6'b000100   | e      | 101         |
+| 6'b000101   | f      | 102         |
+| 6'b000110   | g      | 103         |
+| 6'b000111   | h      | 104         |
+| 6'b001000   | i      | 105         |
+| 6'b001001   | j      | 106         |
+| 6'b001010   | k      | 107         |
+| 6'b001011   | l      | 108         |
+| 6'b001100   | m      | 109         |
+| 6'b001101   | n      | 110         |
+| 6'b001110   | o      | 111         |
+| 6'b001111   | p      | 112         |
+| 6'b010000   | q      | 113         |
+| 6'b010001   | r      | 114         |
+| 6'b010010   | s      | 115         |
+| 6'b010011   | t      | 116         |
+| 6'b010100   | u      | 117         |
+| 6'b010101   | v      | 118         |
+| 6'b010110   | w      | 119         |
+| 6'b010111   | x      | 120         |
+| 6'b011000   | y      | 121         |
+| 6'b011001   | z      | 122         |
+| Default     |  (Space)| 32          |
+
 ## Main Components: 
 - Nexys A7 FPGA
   - https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual?srsltid=AfmBOooTf9fmbBJXkkVbX3Q9yLxFQurI2v2I_xBizHjNdD6rqfFJyH4J 
@@ -92,4 +123,5 @@ Alphabet Bitmap: Depending on which letter is passed to the vga_controller, the 
  
 
 Google Doc: https://docs.google.com/document/d/1mrcgrb-qavMLpFS8MXbVEAYGh_ys5Jjrv_TpArgGm4I/edit?usp=sharing
+
 
