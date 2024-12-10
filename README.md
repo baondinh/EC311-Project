@@ -64,7 +64,8 @@ The tilt detection logic determines the direction and magnitude of tilt based on
 Using the onboard switches, users can type characters and send them to the VGA screen. The switches select letters, while debounce buttons confirm the selection or delete the last input. Characters are displayed at the tilt-determined position.
 #### Key Component: 
 Letter Management Logic: The system maintains three letter slots (letter1, letter2, letter3), each capable of holding a single letter.The switch_input is mapped to letters using a case statement. Each 6-bit combination corresponds to a specific letter (or blank space by default). The selected letter is temporarily stored in letter_buffer.
-Enable and delete signal:  The en signal triggers the addition of a new letter to the next available slot. When a letter is added, the current_position shifts to the next slot, cycling between the three available positions. A flag (flagEN) ensures only one letter is added per press. The del signal removes the letter in the slot pointed to by last_inserted_position. The last_inserted_position register keeps track of the most recently modified slot.
+Enable signal:  The en signal triggers the addition of a new letter to the next available slot. When a letter is added, the current_position shifts to the next slot, cycling between the three available positions. A flag (flagEN) ensures only one letter is added per press. 
+Delete signal: The del signal removes the letter in the slot pointed to by last_inserted_position. The last_inserted_position register keeps track of the most recently modified slot.
 Reset logic: Reset Logic Clear State: Asserting the rst signal resets all letters (letter1, letter2, letter3) to a blank state (6'b111111). Position Reset: The current_position and last_inserted_position are reset to their initial values, ensuring the system starts fresh.
 
 ### VGA Display 
