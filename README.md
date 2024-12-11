@@ -82,33 +82,33 @@ Alphabet Bitmap: Depending on which letter is passed to the vga_controller, the 
 ## Letter Index:
 | 6-bit Input | Letter | ASCII Value |
 | ----------- | ------ | ----------- |
-| 6'b000000   | a      | 97          |
-| 6'b000001   | b      | 98          |
-| 6'b000010   | c      | 99          |
-| 6'b000011   | d      | 100         |
-| 6'b000100   | e      | 101         |
-| 6'b000101   | f      | 102         |
-| 6'b000110   | g      | 103         |
-| 6'b000111   | h      | 104         |
-| 6'b001000   | i      | 105         |
-| 6'b001001   | j      | 106         |
-| 6'b001010   | k      | 107         |
-| 6'b001011   | l      | 108         |
-| 6'b001100   | m      | 109         |
-| 6'b001101   | n      | 110         |
-| 6'b001110   | o      | 111         |
-| 6'b001111   | p      | 112         |
-| 6'b010000   | q      | 113         |
-| 6'b010001   | r      | 114         |
-| 6'b010010   | s      | 115         |
-| 6'b010011   | t      | 116         |
-| 6'b010100   | u      | 117         |
-| 6'b010101   | v      | 118         |
-| 6'b010110   | w      | 119         |
-| 6'b010111   | x      | 120         |
-| 6'b011000   | y      | 121         |
-| 6'b011001   | z      | 122         |
-| Default     |  (Space)| 32          |
+| 6'b000000   | A      | 65          |
+| 6'b000001   | B      | 66          |
+| 6'b000010   | C      | 67          |
+| 6'b000011   | D      | 68          |
+| 6'b000100   | E      | 69          |
+| 6'b000101   | F      | 70          |
+| 6'b000110   | G      | 71          |
+| 6'b000111   | H      | 72          |
+| 6'b001000   | I      | 73          |
+| 6'b001001   | J      | 74          |
+| 6'b001010   | K      | 75          |
+| 6'b001011   | L      | 76          |
+| 6'b001100   | M      | 77          |
+| 6'b001101   | N      | 78          |
+| 6'b001110   | O      | 79          |
+| 6'b001111   | P      | 80          |
+| 6'b010000   | Q      | 81          |
+| 6'b010001   | R      | 82          |
+| 6'b010010   | S      | 83          |
+| 6'b010011   | T      | 84          |
+| 6'b010100   | U      | 85          |
+| 6'b010101   | V      | 86          |
+| 6'b010110   | W      | 87          |
+| 6'b010111   | X      | 88          |
+| 6'b011000   | Y      | 89          |
+| 6'b011001   | Z      | 90          |
+| 6'b111111   | (Blank)|             |
 
 #### Important Code Snippets
 Before getting the accelerometer output to work, character positions after insertion and deletion were handled using pointers and sequential logic. The following shows the old logic that has since been replaced by accelerometer input to control position.
