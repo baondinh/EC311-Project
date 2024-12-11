@@ -53,7 +53,8 @@ module vga_controller(clk, letter_sel_ONE, letter_sel_TWO, letter_sel_THREE, h_s
     reg [3:0] y; 
 
     reg [0:7] bmap [0:15];
-        
+
+    // bitmaps taken from FPGADude ASCII_ROM and adapted for purposes of our code
     always @(posedge clk) begin
         case (curr_letter_sel)
             6'b000000:
