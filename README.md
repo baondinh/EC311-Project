@@ -110,5 +110,59 @@ Alphabet Bitmap: Depending on which letter is passed to the vga_controller, the 
 | 6'b011001   | z      | 122         |
 | Default     |  (Space)| 32          |
 
-
+```v
+// Sequential Logic for Buffer Management
+    always @(posedge clk) begin
+        if (rst) begin
+            letter1 <= 6'b111111;
+            letter2 <= 6'b111111;
+            letter3 <= 6'b111111;
+            current_position <= 2'b00;
+            last_inserted_position <= 2'b00; // Reset the last inserted position
+        end
+        
+        if (en & ~flagEN) begin
+            // Add a new letter to the next available position
+            case (current_position)
+                2'b00: begin
+                    letter1 <= letter_buffer;
+                    current_position <= 2'b01; // Move to next available slot
+                    last_inserted_position <= 2'b00; // Track letter1 as the last inserted
+                end
+                2'b01: begin
+                    letter2 <= letter_buffer;
+                    current_position <= 2'b10; // Move to next available slot
+                    last_inserted_position <= 2'b01; // Track letter2 as the last inserted
+                end
+                2'b10: begin
+                    letter3 <= letter_buffer;
+                    last_inserted_position <= 2'b10;
+                end
+            endcase
+            flagEN = 1;
+        end else if (~en) flagEN = 0;
+        
+        if (del & !flagDel) begin
+            // Perform delete action based on last_inserted_position
+            case (last_inserted_position)
+                2'b00: begin
+                    letter1 <= 6'b111111; // Clear the first letter
+                    current_position <= 2'b00; // Remain at the start (no letters to delete)
+                    last_inserted_position <= 2'b00;
+                end
+                2'b01: begin
+                    letter2 <= 6'b111111; // Clear the second letter
+                    current_position <= 2'b01; // Move position back to letter1
+                    last_inserted_position <= 2'b00;
+                end
+                2'b10: begin
+                    letter3 <= 6'b111111; // Clear the third letter
+                    current_position <= 2'b10; // Move position back to letter2
+                    last_inserted_position <= 2'b01;
+                end
+            endcase
+            flagDel = 1; // Set the flag to indicate delete action is in progress
+        end else if (!del) flagDel = 0; // Reset the flag when delete button is released
+    end
+```
 
