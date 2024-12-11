@@ -111,7 +111,7 @@ Alphabet Bitmap: Depending on which letter is passed to the vga_controller, the 
 | 6'b011001   | Z      | 90          |
 | 6'b111111   | (Blank)|             |
 
-#### Important Code Snippets
+#### Other Code Snippets
 Before getting the accelerometer output to work, character positions after insertion and deletion were handled using pointers and sequential logic. The following shows the old logic that has since been replaced by accelerometer input to control position.
 ```
 // Sequential Logic for Buffer Management
