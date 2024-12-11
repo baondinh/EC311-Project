@@ -37,7 +37,8 @@ This project involves using switch inputs to write letters onto a screen and til
 * [YouTube Demo](https://www.youtube.com/watch?v=7b3YwQWwvXM)
 * [FPGADude GitHub Accelerometer](https://github.com/FPGADude/Digital-Design/tree/main/FPGA%20Projects/Nexys%20A7%203-Axis%20Accelerometer%20SPI)
 
-#### FPGADude - ASCII ROM
+#### [FPGADude - ASCII ROM](https://github.com/FPGADude/Digital-Design/blob/main/FPGA%20Projects/VGA%20Projects/VGA%20Full%20Screen%20Text%20Editor/ascii_rom.v)
+* Adapted bitmaps for vga_controller
 
 #### [Project F](https://projectf.io/posts/racing-the-beam/)
 * Modeled code that magnified smaller bitmap off of "Racing the Beam" project
