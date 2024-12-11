@@ -3,7 +3,7 @@
 ### Yuxuan Chen, Phyliss Darko, Bao Dinh, Kelsey Sweeney
 
 ## Link to Project Demo Video
-
+https://drive.google.com/drive/folders/19lKSHvc7CjlXUHgSjlxcV4TZcBsX02wY?usp=drive_link
 
 
 ## Overview of the Project
